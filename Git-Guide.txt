@@ -1,0 +1,25 @@
+1.Projekt auf deinen PC clonen
+
+-In den Ordner gehen in das du Clonen willst
+-Linksclick "Git Bash"
+
+-Commando eingeben "git init"
+-"git pull https://github.com/Typwithoutname/VMCB"
+
+Jetzt sollte das Projekt im localen Ordner sein
+
+--------------------------------------------------------
+
+2.Die Githubseite updaten
+-In den Ordner gehen den du updaten willst
+-Linksclick "Git Bash"
+
+-"git add --all"
+-"git commit"
+VIM
+"i" drücken dann kann Text eingefügt werden
+Text eingeben
+drücke "ESC" 
+Eingeben von ":x"
+
+-"git push -u origin master
