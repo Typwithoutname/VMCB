@@ -1,0 +1,4 @@
+-Temperatursensor
+-5min Timer
+-10min Timer
+-1Std Timer
