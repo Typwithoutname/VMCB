@@ -1,4 +1,6 @@
 -Temperatursensor
+-7 Segment Anzeige https://eckstein-shop.de/SparkFun-7-Segment-Serial-Display-Red-with-ATMega328-MCU?gclid=EAIaIQobChMI046u4rTw6AIVmuF3Ch2CegcxEAQYAyABEgLWCvD_BwE
 -5min Timer
 -10min Timer
 -1Std Timer
+-CO2-Sensor
