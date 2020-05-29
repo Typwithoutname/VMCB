@@ -1,0 +1,7 @@
+uC anschließen ->Target->Settings Connect under Reset Hardware Reset
+File raufladen ->File->open .bin file raussuchen
+uC abstecken mindestens 1 minute warten
+Reset drücken, uC anstecken, Target->Connect,(Falls Fehler kommen einfach ok klicken und Reset weiter drücken)
+Reset loslasen, Target->Programm und Verify, Starten, Target->Disconnect 
+
+uC per CubeIDE programmieren
