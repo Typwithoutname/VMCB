@@ -68,7 +68,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	enum States currentstate=OFF;
   /* USER CODE END 1 */
-  
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -89,45 +88,30 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  CapacitiveSensorinit(7,0);
+  CapacitiveSensorinit();
   /* USER CODE END 2 */
- 
- 
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
 	  capsenvar=capacitiveSensorRaw(30);
-	 // int val= HAL_GPIO_ReadPin (GPIOA,GPIO_PIN_11);
 	  	  if(capsenvar >= 1000){
-	  		  //HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
-	  	  //HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
-	  	  //HAL_Delay(1000);
-	  	  if (timeholddown<1000){
-	  	  timeholddown++;}
+	  	   timeholddown++;}
+	  	  else if(capsenvar==-10){
+	  		  sleep(&currentstate);
 	  	  }
 	  	  else{
 	  		/* Buttonstatemaschine einfügen*/
-	  		if(timeholddown>2/*0*/){
-	  			//HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
-	  			//HAL_Delay(4000);
-	  			//HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
-	  			NextStateLongPressed(&currentstate);
-	  		}
-	  		else if (timeholddown>0){
-	  			//HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
-	  			//HAL_Delay(500);
-	  			HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
+	  		if(timeholddown>2/*0*/){		//Falls länger gedrückt werden würde
 	  			NextState(&currentstate);
 	  		}
-
+	  		else if (timeholddown>0){
+	  			NextState(&currentstate);	//Falls kurz gedrückt wird
+	  		}
 	  		timeholddown=0;
 	  	  }
 
-	  	  //else{
-	  		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
-	  	  //}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -189,7 +173,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8|GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PB7 */
   GPIO_InitStruct.Pin = GPIO_PIN_7;
@@ -198,18 +182,18 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB0 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
+  /*Configure GPIO pins : PA8 PA13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 

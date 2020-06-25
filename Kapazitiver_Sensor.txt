@@ -1,0 +1,25 @@
+Möglichkeiten Kapazitiver Sensor
+
+1: 1 Send Pin und 1 Receive Pin
++ Kein ADC wird verwendet
+
+- 2 Pins
+- Interrupts
+
+2: Verwenden eines ADC Pins
++ 1 Pin
+
+- Es ist nur 1 ADC am Board, der hierfür verwendet werden muss
+
+3: Komperator
++ Interrupts
+
+- Kein Komperator
+- Vergleichsspannung braucht Pins 
+
+Low Power Mode
+
+- Verwenden wir nicht da alla I/O Pins den selben Status wir zuvor beibehalten
+
+
+https://github.com/STMicroelectronics/STM32CubeG0/blob/master/Projects/STM32G0316-DISCO/Examples/PWR/PWR_LPRUN/Src/main.c

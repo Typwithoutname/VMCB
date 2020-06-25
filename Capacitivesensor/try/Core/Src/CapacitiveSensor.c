@@ -37,10 +37,9 @@
  DEALINGS IN THE SOFTWARE.
 */
 
-// Constructor /////////////////////////////////////////////////////////////////
-// Function that handles the creation and setup of instances
+#define LPMODE
 
-void CapacitiveSensorinit(unsigned char sendPin, unsigned char receivePin)
+void CapacitiveSensorinit()
 {
 	// initialize this instance's variables
 	// Serial.begin(9600);		// for debugging
@@ -51,14 +50,9 @@ void CapacitiveSensorinit(unsigned char sendPin, unsigned char receivePin)
 	CS_AutocaL_Millis = 20000;
 
 
-	DIRECT_MODE_OUTPUT(0,sendPin);						// sendpin to OUTPUT
-	DIRECT_MODE_INPUT(0,receivePin);						// receivePin to INPUT
-	DIRECT_WRITE_LOW(0,sendPin);
-
-	sBit = (sendPin);					// get send pin's ports and bitmask
-	sReg = 0;					// get pointer to output register
-	rBit = (receivePin);				// get receive pin's ports and bitmask
-	rReg = 0;
+	DIRECT_MODE_OUTPUT(0,sBit);						// sendpin to OUTPUT
+	DIRECT_MODE_INPUT(0,rBit);						// receivePin to INPUT
+	DIRECT_WRITE_LOW(0,sBit);
 
 	// get pin mapping and port for receive Pin - from digital pin functions in Wiring.c
 	leastTotal = 0x0FFFFFFFL;   // input large value for autocalibrate begin
@@ -68,6 +62,9 @@ void CapacitiveSensorinit(unsigned char sendPin, unsigned char receivePin)
 
 long capacitiveSensorRaw(unsigned char samples)
 {
+	if(checksleepMode()==10){
+		return -10;
+	}
 	total = 0;
 	if (samples == 0) return 0;
 	if (error < 0) return -1;                  // bad pin - this appears not to work
@@ -82,18 +79,18 @@ long capacitiveSensorRaw(unsigned char samples)
 int SenseOneCycle(void)
 {
     noInterrupts();
-	DIRECT_WRITE_LOW(sReg, sBit);	// sendPin Register low
-	DIRECT_MODE_INPUT(rReg, rBit);	// receivePin to input (pullups are off)
-	DIRECT_MODE_OUTPUT(rReg, rBit); // receivePin to OUTPUT
-	DIRECT_WRITE_LOW(rReg, rBit);	// pin is now LOW AND OUTPUT
+	DIRECT_WRITE_LOW(sendPin, sBit);	// sendPin Register low
+	DIRECT_MODE_INPUT(receivePin, rBit);	// receivePin to input (pullups are off)
+	DIRECT_MODE_OUTPUT(receivePin, rBit); // receivePin to OUTPUT
+	DIRECT_WRITE_LOW(receivePin, rBit);	// pin is now LOW AND OUTPUT
 	delayMicroseconds(10);
 	//HAL_Delay(1000);
-	DIRECT_MODE_INPUT(rReg, rBit);	// receivePin to input (pullups are off)
-	DIRECT_WRITE_HIGH(sReg, sBit);	// sendPin High
+	DIRECT_MODE_INPUT(receivePin, rBit);	// receivePin to input (pullups are off)
+	DIRECT_WRITE_HIGH(sendPin, sBit);	// sendPin High
     interrupts();
 
 
-	while ( !DIRECT_READ(rReg, rBit) && (total < CS_Timeout_Millis) ) {  // while receive pin is LOW AND total is positive value
+	while ( !DIRECT_READ(receivePin, rBit) && (total < CS_Timeout_Millis) ) {  // while receive pin is LOW AND total is positive value
 		total++;
 	}
 	//Serial.print("SenseOneCycle(1): ");
@@ -106,14 +103,14 @@ int SenseOneCycle(void)
 
 	// set receive pin HIGH briefly to charge up fully - because the while loop above will exit when pin is ~ 2.5V
     noInterrupts();
-	DIRECT_WRITE_HIGH(rReg, rBit);
-	DIRECT_MODE_OUTPUT(rReg, rBit);  // receivePin to OUTPUT - pin is now HIGH AND OUTPUT
-	DIRECT_WRITE_HIGH(rReg, rBit);
-	DIRECT_MODE_INPUT(rReg, rBit);	// receivePin to INPUT (pullup is off)
-	DIRECT_WRITE_LOW(sReg, sBit);	// sendPin LOW
+	DIRECT_WRITE_HIGH(receivePin, rBit);
+	DIRECT_MODE_OUTPUT(receivePin, rBit);  // receivePin to OUTPUT - pin is now HIGH AND OUTPUT
+	DIRECT_WRITE_HIGH(receivePin, rBit);
+	DIRECT_MODE_INPUT(receivePin, rBit);	// receivePin to INPUT (pullup is off)
+	DIRECT_WRITE_LOW(sendPin, sBit);	// sendPin LOW
     interrupts();
 
-	while ( DIRECT_READ(rReg, rBit) && (total < CS_Timeout_Millis) ) {  // while receive pin is HIGH  AND total is less than timeout
+	while ( DIRECT_READ(receivePin, rBit) && (total < CS_Timeout_Millis) ) {  // while receive pin is HIGH  AND total is less than timeout
 		total++;
 	}
 
@@ -154,7 +151,7 @@ void SystemClock_Config2(void){
   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-    //Error_Handler();
+    Error_Handler();
   }
   /** Initializes the CPU, AHB and APB busses clocks
   */
@@ -196,20 +193,85 @@ void SystemClock_Decrease(void)
     Error_Handler();
   }
 }
+
+void MX_GPIO_Deinit(){
+	HAL_GPIO_DeInit(GPIOA, GPIO_PIN_13);
+	HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
+	LEDCLEAN();
+}
+
+void MX_GPIO_Init(void)   //funktion aus Main einfach reinkopieren
+{
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+	  /* GPIO Ports Clock Enable */
+	  __HAL_RCC_GPIOB_CLK_ENABLE();
+	  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+	  /*Configure GPIO pin Output Level */
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
+
+	  /*Configure GPIO pin Output Level */
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8|GPIO_PIN_13, GPIO_PIN_RESET);
+
+	  /*Configure GPIO pin : PB7 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_7;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	  /*Configure GPIO pins : PA8 PA13 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_13;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+	  /*Configure GPIO pin : PA12 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_12;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+}
+
+void initTaster(){
+
+	  /* PA.11 will be used to exit from Low Power Run mode */
+	  GPIO_InitTypeDef      GPIO_InitStruct = {0};
+	  GPIO_InitStruct.Pin = LP_pin;
+	  GPIO_InitStruct.Pull = GPIO_PULLUP;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+
+	  /* Enable GPIOA clock */
+	  __HAL_RCC_GPIOA_CLK_ENABLE();									//////////////////////könnte zu Fehler führen
+
+	  HAL_GPIO_Init(LP_PORT, &GPIO_InitStruct);
+}
+
+void deinitTaster(){
+	HAL_GPIO_DeInit(LP_PORT, LP_pin);
+}
+
 #endif
 
 void NextState(enum States* current){
 	switch (*current){
 	case OFF:
 		*current=GREEN;
+		LEDGREEN();
 	break;
 	case GREEN:
-		*current=RED;
+		*current=YELLOW;
+		LEDYELLOW();
 	break;
+	case YELLOW:
+		*current=RED;
+		LEDRED();
 	case RED:
-		HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
-		HAL_Delay(2000);
-		HAL_GPIO_TogglePin (GPIOA,GPIO_PIN_12);
+		LEDCLEAN();
 		*current=OFF;
 	break;
 	default:
@@ -217,25 +279,48 @@ void NextState(enum States* current){
 	}
 }
 
+void sleep(enum States* current){
+	MX_GPIO_Deinit();
+	initTaster();
+	SystemClock_Decrease();
+	HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE2);
+	HAL_PWREx_EnableLowPowerRunMode();
+	while(DIRECT_READ_LP() == GPIO_PIN_RESET)
+		     {
+		     }
+
+	 /* Wait until wire is removed */
+	while(DIRECT_READ_LP() == GPIO_PIN_SET)
+		     {
+		     }
+	HAL_PWREx_DisableLowPowerRunMode();
+	SystemClock_Config2();
+	deinitTaster();
+	MX_GPIO_Init();
+	CapacitiveSensorinit();
+	*current=OFF;
+}
+
 void NextStateLongPressed(enum States* current){
 	switch (*current){
-#ifdef LPMODE
-	case OFF:
-		*current=LPMode;
-		SystemClock_Decrease();
-	    HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE2);
-
-		HAL_PWREx_EnableLowPowerRunMode();
 
 	break;
-	case LPMode:
-		*current=OFF;
-		HAL_PWREx_DisableLowPowerRunMode();
-	    SystemClock_Config2();
-	break;
-#endif
 	default:
 	break;
+	}
+}
+
+int checksleepMode(){
+	initTaster();
+	if(DIRECT_READ_LP()==GPIO_PIN_RESET){
+		deinitTaster();
+		CapacitiveSensorinit();
+		return 10;
+	}
+	else{
+		return 0;
+		deinitTaster();
+		CapacitiveSensorinit();
 	}
 }
 

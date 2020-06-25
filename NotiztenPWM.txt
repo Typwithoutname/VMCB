@@ -1,0 +1,3 @@
+High Low Pegel sind nichts anderes als PWM-Signale mit unterschiedlichen DutyCycle
+
+Frage wie verendere ich das DutyCycle schnell genug
