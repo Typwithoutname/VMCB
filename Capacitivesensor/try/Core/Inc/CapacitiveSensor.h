@@ -65,30 +65,39 @@
 #define SRC_CAPACITIVESENSOR_H_
 
 #include "stm32g0xx_hal.h"
+#include "LED.h"
 
 
+//defines für Kapacitiv
+#define sBit 						13
+#define rBit 						12
 
-#define DIRECT_READ(base, pin)          (GPIOB->IDR>>pin)&0x01
-#define DIRECT_MODE_INPUT(base, pin)    GPIOB->MODER&=~(0x11<<(pin*2));						//pinMode(pin,INPUT)
-#define DIRECT_MODE_OUTPUT(base, pin)   GPIOB->MODER|=(0x01<<(pin*2));
-#define DIRECT_WRITE_LOW(base, pin)     GPIOB->BRR|=0x01<<(pin)
-#define DIRECT_WRITE_HIGH(base, pin)    GPIOB->ODR|=0x01<<(pin)
-#define interrupts()						//Need to be changed in final version
+
+#define DIRECT_READ(base, pin)          (GPIOA->IDR>>pin)&0x01
+#define DIRECT_MODE_INPUT(base, pin)    GPIOA->MODER&=~(0x11<<(pin*2));						//pinMode(pin,INPUT)
+#define DIRECT_MODE_OUTPUT(base, pin)   GPIOA->MODER|=(0x01<<(pin*2));
+#define DIRECT_WRITE_LOW(base, pin)     GPIOA->BRR|=0x01<<(pin)
+#define DIRECT_WRITE_HIGH(base, pin)    GPIOA->ODR|=0x01<<(pin)
+#define interrupts()
 #define noInterrupts()
 #define IO_REG_TYPE unsigned char
+//define LowPowermode
+#define LP_pin						13
+#define LP_PORT						GPIOA
+#define DIRECT_READ_LP()			(LP_PORT->IDR>>LP_pin)&0x01
 
 
 		// enums
-#ifdef	LPMODE
-enum States {OFF,RED,GREEN,LPMode};
-#else
-enum States {OFF,RED,GREEN};
-#endif
-		void CapacitiveSensorinit(unsigned char sendPin, unsigned char receivePin);
+
+enum States {OFF,RED,YELLOW,GREEN};
+
+		void CapacitiveSensorinit(/*unsigned char sendPin, unsigned char receivePin*/);
 		long capacitiveSensorRaw(unsigned char samples);
 		void delayMicroseconds(unsigned int value);
 		void NextState(enum States* current);
 		void NextStateLongPressed(enum States* current);
+		void sleep();
+		int checksleepMode();
 	  // library-accessible "private" interface
 
 	  // variables
@@ -100,10 +109,7 @@ enum States {OFF,RED,GREEN};
 		unsigned long  lastCal;
 		unsigned long  total;
 		unsigned long  f_CPU;
-		IO_REG_TYPE sBit;   // send pin's ports and bitmask
-		volatile IO_REG_TYPE *sReg;
-		IO_REG_TYPE rBit;    // receive pin's ports and bitmask
-		volatile IO_REG_TYPE *rReg;
+
 	  // methods
 		int SenseOneCycle(void);
 
