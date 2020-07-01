@@ -98,7 +98,7 @@ int main(void)
 	  capsenvar=capacitiveSensorRaw(30);
 	  	  if(capsenvar >= 1000){
 	  	   timeholddown++;}
-	  	  else if(capsenvar==-10){
+	  	  else if(capsenvar==-10){	//Lowpowermode
 	  		  sleep(&currentstate);
 	  	  }
 	  	  else{
