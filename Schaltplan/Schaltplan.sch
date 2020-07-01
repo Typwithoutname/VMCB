@@ -216,7 +216,7 @@ U 1 1 5EF35B4C
 P 6100 2200
 F 0 "J1" H 6180 2242 50  0000 L CNN
 F 1 "Conn_01x01" H 6180 2151 50  0000 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 6100 2200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6100 2200 50  0001 C CNN
 F 3 "~" H 6100 2200 50  0001 C CNN
 	1    6100 2200
 	1    0    0    -1  
@@ -374,4 +374,37 @@ F 3 "~" H 5500 5900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5700 5900 6450 5900
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5EFC65F8
+P 1750 6550
+F 0 "H1" H 1850 6596 50  0000 L CNN
+F 1 "MountingHole" H 1850 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.5mm" H 1750 6550 50  0001 C CNN
+F 3 "~" H 1750 6550 50  0001 C CNN
+	1    1750 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5EFC738C
+P 2500 6550
+F 0 "H2" H 2600 6596 50  0000 L CNN
+F 1 "MountingHole" H 2600 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.5mm" H 2500 6550 50  0001 C CNN
+F 3 "~" H 2500 6550 50  0001 C CNN
+	1    2500 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5EFC7750
+P 3200 6550
+F 0 "H3" H 3300 6596 50  0000 L CNN
+F 1 "MountingHole" H 3300 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.5mm" H 3200 6550 50  0001 C CNN
+F 3 "~" H 3200 6550 50  0001 C CNN
+	1    3200 6550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
