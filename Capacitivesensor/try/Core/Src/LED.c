@@ -12,7 +12,7 @@ void initLED(){
 
 }
 
-void LEDRED(){
+void LEDYELLOW(){
 	GPIO_InitTypeDef GPIO_InitStruct1 = {0};
 
 		HAL_GPIO_WritePin(LEDPORT1, LEDPIN1, GPIO_PIN_RESET);
@@ -28,9 +28,9 @@ void LEDRED(){
 		HAL_GPIO_Init(LEDPORT2, &GPIO_InitStruct1);
 
 		/* Insert delay 100 ms */
-		HAL_Delay(100);
+		//HAL_Delay(100);
 }
-void LEDGREEN(){
+void LEDRED(){
 	GPIO_InitTypeDef GPIO_InitStruct2 = {0};
 
 		HAL_GPIO_WritePin(LEDPORT2, LEDPIN2, GPIO_PIN_RESET);
@@ -46,10 +46,10 @@ void LEDGREEN(){
 		HAL_GPIO_Init(LEDPORT1, &GPIO_InitStruct2);
 
 		/* Insert delay 100 ms */
-		HAL_Delay(100);
+		//HAL_Delay(100);
 
 }
-void LEDYELLOW(){
+void LEDGREEN(){
 	GPIO_InitTypeDef GPIO_InitStruct3 = {0};
 
 		HAL_GPIO_WritePin(LEDPORT1, LEDPIN1, GPIO_PIN_SET);
@@ -57,14 +57,14 @@ void LEDYELLOW(){
 		GPIO_InitStruct3.Pin = LEDPIN1;
 		GPIO_InitStruct3.Mode = GPIO_MODE_OUTPUT_PP;
 		GPIO_InitStruct3.Pull = GPIO_NOPULL;
-		HAL_GPIO_Init(GPIOA, &GPIO_InitStruct3);
+		HAL_GPIO_Init(LEDPORT1, &GPIO_InitStruct3);
 
 		GPIO_InitStruct3.Pin = LEDPIN2;
 		GPIO_InitStruct3.Mode = GPIO_MODE_INPUT;
 		GPIO_InitStruct3.Pull = GPIO_NOPULL;
 		HAL_GPIO_Init(LEDPORT2, &GPIO_InitStruct3);
 
-		HAL_Delay(100);
+		//HAL_Delay(100);
 
 }
 
