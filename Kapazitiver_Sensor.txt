@@ -23,3 +23,9 @@ Low Power Mode
 
 
 https://github.com/STMicroelectronics/STM32CubeG0/blob/master/Projects/STM32G0316-DISCO/Examples/PWR/PWR_LPRUN/Src/main.c
+
+8,1mA
+0,24mA
+
+1LED 8mA
+6,63mA

@@ -1,0 +1,14 @@
+CapacitiveSensor.c:43:6:CapacitiveSensorinit	16	static
+CapacitiveSensor.c:64:6:capacitiveSensorRaw	24	static
+CapacitiveSensor.c:81:5:SenseOneCycle	8	static
+CapacitiveSensor.c:128:6:delayMicroseconds	24	static
+CapacitiveSensor.c:135:6:SystemClock_Config3	88	static
+CapacitiveSensor.c:173:6:SystemClock_Decrease2	88	static
+CapacitiveSensor.c:199:6:MX_GPIO_Deinit	8	static
+CapacitiveSensor.c:204:6:MX_GPIO_Init	32	static
+CapacitiveSensor.c:219:6:initTaster	32	static
+CapacitiveSensor.c:235:6:deinitTaster	8	static
+CapacitiveSensor.c:241:6:NextState	16	static
+CapacitiveSensor.c:264:6:sleep	16	static
+CapacitiveSensor.c:282:6:NextStateLongPressed	16	static
+CapacitiveSensor.c:291:5:checksleepMode	8	static
