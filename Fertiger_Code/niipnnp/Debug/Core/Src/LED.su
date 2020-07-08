@@ -1,0 +1,5 @@
+LED.c:9:6:initLED	16	static
+LED.c:15:6:LEDYELLOW	32	static
+LED.c:33:6:LEDRED	32	static
+LED.c:52:6:LEDGREEN	32	static
+LED.c:71:6:LEDCLEAN	8	static
