@@ -1,6 +1,6 @@
-update=15.07.2020 15:56:38
+update=15.07.2020 19:56:15
 version=1
-last_client=kicad
+last_client=pcbnew
 [general]
 version=1
 RootSch=
@@ -256,4 +256,15 @@ uViaDiameter=0.4
 uViaDrill=0.2
 dPairWidth=0.35
 dPairGap=0.35
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
+Name=X
+Clearance=0.7
+TrackWidth=0.3
+ViaDiameter=0.7
+ViaDrill=0.5
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.25
+dPairGap=0.25
 dPairViaGap=0.25
