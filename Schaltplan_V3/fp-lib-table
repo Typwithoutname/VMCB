@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name HU2032-LF)(type Legacy)(uri "D:/Studium/Semester 6/KiCAD_Kurs/STM32/HU2032-LF/HU2032-LF/KiCad/HU2032-LF.mod")(options "")(descr ""))
+  (lib (name STM32G031J6M6)(type Legacy)(uri "D:/Studium/Semester 6/KiCAD_Kurs/STM32/STM32G031J6M6/KiCad/STM32G031J6M6.mod")(options "")(descr ""))
+)
