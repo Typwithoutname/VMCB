@@ -191,7 +191,7 @@ F 3 "~" H 4700 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5200 4400 2    50   Input ~ 0
-PA12-ReceivePin-kS
+PA12ReceivePin-kS
 Text GLabel 1800 4700 0    50   Input ~ 0
 PA1SendPin-kS
 Text GLabel 4200 1700 0    50   Input ~ 0
@@ -353,10 +353,10 @@ Wire Wire Line
 	5250 1700 4700 1700
 Connection ~ 4700 1700
 $Comp
-L Connector:Conn_01x04_Male J?
+L Connector:Conn_01x04_Male J2
 U 1 1 5F0F49B6
 P 5500 5900
-F 0 "J?" H 5608 6181 50  0000 C CNN
+F 0 "J2" H 5608 6181 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 5608 6090 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5500 5900 50  0001 C CNN
 F 3 "~" H 5500 5900 50  0001 C CNN
@@ -364,10 +364,10 @@ F 3 "~" H 5500 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L JS102011SAQN:JS102011SAQN S?
+L JS102011SAQN:JS102011SAQN S1
 U 1 1 5F0FD9F0
 P 8100 5600
-F 0 "S?" H 8500 5865 50  0000 C CNN
+F 0 "S1" H 8500 5865 50  0000 C CNN
 F 1 "JS102011SAQN" H 8500 5774 50  0000 C CNN
 F 2 "JS102011SAQN:JS102011SAQN" H 8750 5700 50  0001 L CNN
 F 3 "http://www.ckswitches.com/media/1422/js.pdf" H 8750 5600 50  0001 L CNN
