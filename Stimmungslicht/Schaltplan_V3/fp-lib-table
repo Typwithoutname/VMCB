@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name libs_fp)(type KiCad)(uri /home/mich1/Downloads/Stimmungslicht/libs_fp.pretty)(options "")(descr ""))
+)
