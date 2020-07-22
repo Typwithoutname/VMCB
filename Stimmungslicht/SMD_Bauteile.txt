@@ -1,0 +1,27 @@
+SMD Widerstände: Reihe R0603
+
+LED's:
+
+grün: HSME-A100-L01J1
+
+bei 10mA: Forward Voltage: 1.8V -> Rv = (3.3 - 1.8)V /10mA = 150Ohm -> nach Reihe 150 Ohm
+
+
+gelb: HSMY-A100-J00J1
+
+bei 10mA: Forward Voltage: 2.1V -> Rv = (3.3 - 2.1)V /10mA = 120Ohm -> nach Reihe 120 Ohm
+
+
+rot:  HSMS-A100-J00J1
+
+bei 10mA: Forward Voltage: 2.1V -> Rv = (3.3 - 2.1)V /10mA = 120Ohm -> nach Reihe 120 Ohm
+
+Links der Bauteile in der Datenbank: (VPN nötig)
+http://partkeepr.othr.de/show_part_info.php?pid=537 -> 150 Ohm
+http://partkeepr.othr.de/show_part_info.php?pid=508 -> 120 Ohm
+http://partkeepr.othr.de/show_part_info.php?pid=2477 -> gelbe LED
+http://partkeepr.othr.de/show_part_info.php?pid=2393 -> grüne LED
+http://partkeepr.othr.de/show_part_info.php?pid=2495 -> rote LED
+http://partkeepr.othr.de/show_part_info.php?pid=695 -> 1 MOhm
+http://partkeepr.othr.de/show_part_info.php?pid=698 -> 4.7 MOhm
+http://partkeepr.othr.de/show_part_info.php?pid=1176 -> 0 Ohm

@@ -218,7 +218,7 @@ F 3 "~" H 5800 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L HU2032-LF:HU2032-LF U1
+L Stimmungslicht-rescue:HU2032-LF-HU2032-LF U1
 U 1 1 5EF3D88A
 P 1550 1350
 F 0 "U1" H 2000 1615 50  0000 C CNN
@@ -263,7 +263,7 @@ $EndComp
 Text GLabel 8100 5700 0    50   Input ~ 0
 on-off
 $Comp
-L STM32G031J6M6:STM32G031J6M6 IC1
+L Stimmungslicht-rescue:STM32G031J6M6-STM32G031J6M6 IC1
 U 1 1 5EE382F6
 P 2100 4200
 F 0 "IC1" H 3650 4465 50  0000 C CNN
@@ -340,7 +340,7 @@ F 3 "~" H 5500 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L JS102011SAQN:JS102011SAQN S1
+L Stimmungslicht-rescue:JS102011SAQN-JS102011SAQN S1
 U 1 1 5F0FD9F0
 P 8100 5700
 F 0 "S1" H 8500 5965 50  0000 C CNN
@@ -416,7 +416,7 @@ F 3 "~" H 5500 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Touch_Sens_Pad:Touch_Sens_Pad U101
+L Stimmungslicht-rescue:Touch_Sens_Pad-Touch_Sens_Pad U101
 U 1 1 5F1231CE
 P 5650 1600
 F 0 "U101" H 5950 1650 50  0000 R CNN
@@ -427,7 +427,7 @@ F 3 "" H 5650 1600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Touch_Sens_Pad:Touch_Sens_Pad U102
+L Stimmungslicht-rescue:Touch_Sens_Pad-Touch_Sens_Pad U102
 U 1 1 5F123C1E
 P 5850 1600
 F 0 "U102" H 6150 1650 50  0000 R CNN
@@ -438,7 +438,7 @@ F 3 "" H 5850 1600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Touch_Sens_Pad:Touch_Sens_Pad U103
+L Stimmungslicht-rescue:Touch_Sens_Pad-Touch_Sens_Pad U103
 U 1 1 5F123EC0
 P 6050 1600
 F 0 "U103" H 6350 1650 50  0000 R CNN
@@ -449,7 +449,7 @@ F 3 "" H 6050 1600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Touch_Sens_Pad:Touch_Sens_Pad U104
+L Stimmungslicht-rescue:Touch_Sens_Pad-Touch_Sens_Pad U104
 U 1 1 5F1240DE
 P 6250 1600
 F 0 "U104" H 6550 1650 50  0000 R CNN
