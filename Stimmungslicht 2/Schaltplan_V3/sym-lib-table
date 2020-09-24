@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name HU2032-LF)(type Legacy)(uri /home/mich1/Downloads/Stimmungslicht/libs_sch/HU2032-LF.lib)(options "")(descr ""))
+  (lib (name JS102011SAQN)(type Legacy)(uri /home/mich1/Downloads/Stimmungslicht/libs_sch/JS102011SAQN.lib)(options "")(descr ""))
+  (lib (name STM32G031J6M6)(type Legacy)(uri /home/mich1/Downloads/Stimmungslicht/libs_sch/STM32G031J6M6.lib)(options "")(descr ""))
+  (lib (name Touch_Sens_Pad)(type Legacy)(uri /home/mich1/Downloads/Stimmungslicht/libs_sch/Touch_Sens_Pad.lib)(options "")(descr ""))
+  (lib (name Stimmungslicht-rescue)(type Legacy)(uri ${KIPRJMOD}/Stimmungslicht-rescue.lib)(options "")(descr ""))
+)
