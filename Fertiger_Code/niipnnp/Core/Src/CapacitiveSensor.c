@@ -63,10 +63,10 @@ void CapacitiveSensorinit()
 
 long capacitiveSensorRaw(unsigned char samples)
 {
-	sleepmodevar=checksleepMode();
+	/*sleepmodevar=checksleepMode();
 	if(sleepmodevar==10){
 		return -10;
-	}
+	}*/
 	total = 0;
 	if (samples == 0) return 0;
 	if (error < 0) return -1;                  // bad pin - this appears not to work

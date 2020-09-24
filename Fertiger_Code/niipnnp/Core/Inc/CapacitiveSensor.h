@@ -70,7 +70,7 @@
 
 
 //defines für Kapacitiv
-#define sBit 						1
+#define sBit 						8
 #define rBit 						12
 
 
@@ -83,7 +83,7 @@
 #define noInterrupts()
 #define IO_REG_TYPE unsigned char
 //define LowPowermode
-#define LP_pin						GPIO_PIN_1
+#define LP_pin						GPIO_PIN_8
 #define LP_PORT						GPIOA
 //#define DIRECT_READ_LP(pin)			(GPIOA->IDR>>pin)&0x01
 

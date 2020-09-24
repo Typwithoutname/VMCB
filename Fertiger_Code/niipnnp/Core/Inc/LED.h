@@ -9,8 +9,10 @@
 #define INC_LED_H_
 #include "stm32g0xx_hal.h"
 
+#define LED_active 0
+
 #define LEDPORT1 GPIOA
-#define LEDPIN1 GPIO_PIN_8
+#define LEDPIN1 GPIO_PIN_13
 #define LEDPORT2 GPIOB
 #define LEDPIN2 GPIO_PIN_9
 
