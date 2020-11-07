@@ -1,0 +1,11 @@
+Pads: 5mm
+
+obere Pads:
+
+13.863mm hoch 
+11.613mm Abstand -> durch 2 teilen -> 5.8065
+
+untere Pads:
+
+8.885mm hoch
+22.855mm Abstand -> durch 2 teilen -> 11.4275
