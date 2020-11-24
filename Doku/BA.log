@@ -1,0 +1,316 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.11)  22 SEP 2020 19:06
+entering extended mode
+**./BA.tex
+(BA.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\tabularx.sty"
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen135
+\ar@mcellbox=\box45
+\extrarowheight=\dimen136
+\NC@list=\toks17
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+)
+\TX@col@width=\dimen137
+\TX@old@table=\dimen138
+\TX@old@col=\dimen139
+\TX@target=\dimen140
+\TX@delta=\dimen141
+\TX@cols=\count175
+\TX@ftn=\toks18
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/02/28 3.41 The Babel package
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/babel-german\ngerman.ldf"
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/babel-german\ngermanb.ldf"
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/02/28 3.41 Babel common definitions
+\babel@savecnt=\count176
+\U@D=\dimen142
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+\bbl@dirlevel=\count177
+)
+Package babel Info: Making " an active character on input line 121.
+)))
+("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks19
+\minrowclearance=\skip51
+)
+\rownum=\count178
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/abstract\abstract.sty"
+Package: abstract 2009/06/08 v1.2a configurable abstracts
+\abstitleskip=\skip52
+\absleftindent=\skip53
+\absrightindent=\skip54
+\absparindent=\skip55
+\absparsep=\skip56
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count179
+\l__pdf_internal_box=\box47
+)
+
+LaTeX Warning: Unused global option(s):
+    [DIV=13,BCOR=10mm,department=FakEI,parskip=half,automark].
+
+(BA.aux
+
+LaTeX Warning: Label `fig:SMD-Baustein' multiply defined.
+
+
+LaTeX Warning: Label `fig:Register' multiply defined.
+
+
+LaTeX Warning: Label `fig:Register' multiply defined.
+
+
+LaTeX Warning: Label `fig:Register' multiply defined.
+
+)
+\openout1 = `BA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count180
+\scratchdimen=\dimen145
+\scratchbox=\box48
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen146
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks22
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 45.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 45.
+
+[1
+
+{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2
+
+] (BA.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+)
+\tf@toc=\write3
+\openout3 = `BA.toc'.
+
+ [3
+
+] [4
+
+]
+<s-l225.jpg, id=19, 169.38281pt x 169.38281pt>
+File: s-l225.jpg Graphic file (type jpg)
+<use s-l225.jpg>
+Package pdftex.def Info: s-l225.jpg  used on input line 62.
+(pdftex.def)             Requested size: 312.00119pt x 312.01447pt.
+<Stm32g031j6m6.png, id=20, 536.0025pt x 123.46124pt>
+File: Stm32g031j6m6.png Graphic file (type png)
+<use Stm32g031j6m6.png>
+Package pdftex.def Info: Stm32g031j6m6.png  used on input line 66.
+(pdftex.def)             Requested size: 390.0pt x 89.83017pt.
+ [5] [6 <./s-l225.jpg> <./Stm32g031j6m6.png>] [7]
+<LED_Schaltung.png, id=34, 255.354pt x 384.2355pt>
+File: LED_Schaltung.png Graphic file (type png)
+<use LED_Schaltung.png>
+Package pdftex.def Info: LED_Schaltung.png  used on input line 80.
+(pdftex.def)             Requested size: 312.00119pt x 469.48776pt.
+ [8 <./LED_Schaltung.png>]
+<Kennlinien_LED_SMD.png, id=39, 376.40625pt x 264.99pt>
+File: Kennlinien_LED_SMD.png Graphic file (type png)
+<use Kennlinien_LED_SMD.png>
+Package pdftex.def Info: Kennlinien_LED_SMD.png  used on input line 115.
+(pdftex.def)             Requested size: 312.00119pt x 219.66264pt.
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+[10 <./Kennlinien_LED_SMD.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+[11] [12] [13] [14]
+<Gehauuse_Stimmungslicht.jpg, id=61, 1043.9pt x 782.925pt>
+File: Gehauuse_Stimmungslicht.jpg Graphic file (type jpg)
+<use Gehauuse_Stimmungslicht.jpg>
+Package pdftex.def Info: Gehauuse_Stimmungslicht.jpg  used on input line 185.
+(pdftex.def)             Requested size: 390.0pt x 292.49709pt.
+<gehauuse_4.pdf, id=62, 1690.315pt x 1195.46625pt>
+File: gehauuse_4.pdf Graphic file (type pdf)
+<use gehauuse_4.pdf>
+Package pdftex.def Info: gehauuse_4.pdf  used on input line 193.
+(pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
+<Deckel.pdf, id=63, 1690.315pt x 1195.46625pt>
+File: Deckel.pdf Graphic file (type pdf)
+<use Deckel.pdf>
+Package pdftex.def Info: Deckel.pdf  used on input line 200.
+(pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
+ [15 <./Gehauuse_Stimmungslicht.jpg>] [16 <./gehauuse_4.pdf, page is rotated 90
+ degrees>] [17 <./Deckel.pdf, page is rotated 90 degrees>]
+(BA.lof
+Overfull \hbox (2.63765pt too wide) in paragraph at lines 5--5
+ [][] []\OT1/cmr/m/n/12 Kennlinien for-ward cur-rent vs. for-ward vol-ta-ge der
+ un-ter-schied- 
+ []
+
+)
+\tf@lof=\write4
+\openout4 = `BA.lof'.
+
+ [18
+
+] [19
+
+] (BA.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2626 strings out of 480934
+ 36364 string characters out of 2909658
+ 294425 words of memory out of 3000000
+ 18467 multiletter control sequences out of 15000+200000
+ 538461 words of font info for 44 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,10n,37p,1846b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on BA.pdf (19 pages, 780603 bytes).
+PDF statistics:
+ 133 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

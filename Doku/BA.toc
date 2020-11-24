@@ -1,0 +1,21 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Funktionsweise}{4}%
+\contentsline {section}{\numberline {2}Microcontroller}{5}%
+\contentsline {section}{\numberline {3}LED}{7}%
+\contentsline {subsection}{\numberline {3.1}WS2812b}{7}%
+\contentsline {subsection}{\numberline {3.2}LED-Schaltung}{8}%
+\contentsline {subsubsection}{\numberline {3.2.1}LED1 leuchtet}{9}%
+\contentsline {subsubsection}{\numberline {3.2.2}LED2 leuchtet}{9}%
+\contentsline {subsubsection}{\numberline {3.2.3}LED3 leuchtet}{9}%
+\contentsline {subsubsection}{\numberline {3.2.4}keine LED leuchtet}{9}%
+\contentsline {subsection}{\numberline {3.3}Auswahl der Widerstände für die LED-Schaltung}{10}%
+\contentsline {section}{\numberline {4}Kapazitiver Sensor}{12}%
+\contentsline {subsection}{\numberline {4.1}Komparator}{12}%
+\contentsline {subsection}{\numberline {4.2}ADC}{12}%
+\contentsline {subsection}{\numberline {4.3}Send- und Receivepins}{12}%
+\contentsline {section}{\numberline {5}Energiesparmodus}{14}%
+\contentsline {section}{\numberline {6}Schaltplan, Layout und Gehäuse}{15}%
+\contentsline {subsection}{\numberline {6.1}Schaltplan}{15}%
+\contentsline {subsection}{\numberline {6.2}Layout}{15}%
+\contentsline {subsection}{\numberline {6.3}Gehäuse}{15}%
+\contentsline {section}{\numberline {7}Fazit}{15}%
