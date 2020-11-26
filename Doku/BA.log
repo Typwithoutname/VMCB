@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2019.2.8)  26 NOV 2020 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2019.2.8)  26 NOV 2020 19:15
 entering extended mode
 **./BA.tex
 (BA.tex
@@ -150,7 +150,13 @@ LaTeX Warning: Unused global option(s):
 
 (BA.aux
 
+LaTeX Warning: Label `fig:Register' multiply defined.
+
+
 LaTeX Warning: Label `fig:SMD-Baustein' multiply defined.
+
+
+LaTeX Warning: Label `fig:Register' multiply defined.
 
 
 LaTeX Warning: Label `fig:Register' multiply defined.
@@ -277,78 +283,99 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [3
 
-] [4
-
 ]
-<s-l225.jpg, id=19, 169.38281pt x 169.38281pt>
+<AblaufMain.jpg, id=16, 455.45157pt x 490.08093pt>
+File: AblaufMain.jpg Graphic file (type jpg)
+<use AblaufMain.jpg>
+Package pdftex.def Info: AblaufMain.jpg  used on input line 56.
+(pdftex.def)             Requested size: 467.99881pt x 503.59253pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 56--57
+ [] 
+ []
+
+<Zustandsdiagramm.jpg, id=17, 405.76593pt x 425.33907pt>
+File: Zustandsdiagramm.jpg Graphic file (type jpg)
+<use Zustandsdiagramm.jpg>
+Package pdftex.def Info: Zustandsdiagramm.jpg  used on input line 63.
+(pdftex.def)             Requested size: 467.99881pt x 490.5899pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 63--64
+ [] 
+ []
+
+[4
+
+ <./AblaufMain.jpg>] [5 <./Zustandsdiagramm.jpg>]
+<s-l225.jpg, id=24, 169.38281pt x 169.38281pt>
 File: s-l225.jpg Graphic file (type jpg)
 <use s-l225.jpg>
-Package pdftex.def Info: s-l225.jpg  used on input line 62.
+Package pdftex.def Info: s-l225.jpg  used on input line 77.
 (pdftex.def)             Requested size: 312.00119pt x 312.01447pt.
-<Stm32g031j6m6.png, id=20, 536.0025pt x 123.46124pt>
+<Stm32g031j6m6.png, id=25, 536.0025pt x 123.46124pt>
 File: Stm32g031j6m6.png Graphic file (type png)
 <use Stm32g031j6m6.png>
-Package pdftex.def Info: Stm32g031j6m6.png  used on input line 66.
+Package pdftex.def Info: Stm32g031j6m6.png  used on input line 81.
 (pdftex.def)             Requested size: 390.0pt x 89.83017pt.
- [5] [6 <./s-l225.jpg> <./Stm32g031j6m6.png>] [7]
-<LED_Schaltung.png, id=34, 255.354pt x 384.2355pt>
+ [6] [7 <./s-l225.jpg> <./Stm32g031j6m6.png>] [8]
+<LED_Schaltung.png, id=39, 255.354pt x 384.2355pt>
 File: LED_Schaltung.png Graphic file (type png)
 <use LED_Schaltung.png>
-Package pdftex.def Info: LED_Schaltung.png  used on input line 80.
+Package pdftex.def Info: LED_Schaltung.png  used on input line 95.
 (pdftex.def)             Requested size: 312.00119pt x 469.48776pt.
- [8 <./LED_Schaltung.png>]
-<Kennlinien_LED_SMD.png, id=39, 376.40625pt x 264.99pt>
+ [9 <./LED_Schaltung.png>]
+<Kennlinien_LED_SMD.png, id=44, 376.40625pt x 264.99pt>
 File: Kennlinien_LED_SMD.png Graphic file (type png)
 <use Kennlinien_LED_SMD.png>
-Package pdftex.def Info: Kennlinien_LED_SMD.png  used on input line 115.
+Package pdftex.def Info: Kennlinien_LED_SMD.png  used on input line 130.
 (pdftex.def)             Requested size: 312.00119pt x 219.66264pt.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-[10 <./Kennlinien_LED_SMD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[11 <./Kennlinien_LED_SMD.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[11]
-<RCTiefpass.png, id=51, 262.73157pt x 108.405pt>
+[12]
+<RCTiefpass.png, id=56, 262.73157pt x 108.405pt>
 File: RCTiefpass.png Graphic file (type png)
 <use RCTiefpass.png>
-Package pdftex.def Info: RCTiefpass.png  used on input line 153.
+Package pdftex.def Info: RCTiefpass.png  used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 160.92317pt.
- [12 <./RCTiefpass.png>]
-<KapazitiverSensor.png, id=56, 263.26929pt x 203.53592pt>
+ [13 <./RCTiefpass.png>]
+<KapazitiverSensor.png, id=62, 263.26929pt x 203.53592pt>
 File: KapazitiverSensor.png Graphic file (type png)
 <use KapazitiverSensor.png>
-Package pdftex.def Info: KapazitiverSensor.png  used on input line 165.
+Package pdftex.def Info: KapazitiverSensor.png  used on input line 180.
 (pdftex.def)             Requested size: 390.0pt x 301.53278pt.
- [13] [14 <./KapazitiverSensor.png>] [15] [16]
-<Gehauuse_Stimmungslicht.jpg, id=71, 1043.9pt x 782.925pt>
+ [14] [15 <./KapazitiverSensor.png>] [16] [17]
+[18]
+<Gehauuse_Stimmungslicht.jpg, id=79, 1043.9pt x 782.925pt>
 File: Gehauuse_Stimmungslicht.jpg Graphic file (type jpg)
 <use Gehauuse_Stimmungslicht.jpg>
-Package pdftex.def Info: Gehauuse_Stimmungslicht.jpg  used on input line 211.
+Package pdftex.def Info: Gehauuse_Stimmungslicht.jpg  used on input line 230.
 (pdftex.def)             Requested size: 390.0pt x 292.49709pt.
-<gehauuse_4.pdf, id=72, 1690.315pt x 1195.46625pt>
+<gehauuse_4.pdf, id=80, 1690.315pt x 1195.46625pt>
 File: gehauuse_4.pdf Graphic file (type pdf)
 <use gehauuse_4.pdf>
-Package pdftex.def Info: gehauuse_4.pdf  used on input line 219.
+Package pdftex.def Info: gehauuse_4.pdf  used on input line 238.
 (pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
-<Deckel.pdf, id=73, 1690.315pt x 1195.46625pt>
+<Deckel.pdf, id=81, 1690.315pt x 1195.46625pt>
 File: Deckel.pdf Graphic file (type pdf)
 <use Deckel.pdf>
-Package pdftex.def Info: Deckel.pdf  used on input line 226.
+Package pdftex.def Info: Deckel.pdf  used on input line 245.
 (pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
-
-[17 <./Gehauuse_Stimmungslicht.jpg>] [18 <./gehauuse_4.pdf, page is rotated 90 
-degrees>] [19 <./Deckel.pdf, page is rotated 90 degrees>] (BA.lof
-Overfull \hbox (2.63765pt too wide) in paragraph at lines 5--5
+ [19 <./Gehauuse_Stimmungslicht.jpg>] [20 <./gehauuse_4.pdf, page is rotated 90
+ degrees>] [21 <./Deckel.pdf, page is rotated 90 degrees>] (BA.lof
+Overfull \hbox (2.63765pt too wide) in paragraph at lines 7--7
  [][] []\OT1/cmr/m/n/12 Kennlinien for-ward cur-rent vs. for-ward vol-ta-ge der
  un-ter-schied- 
  []
@@ -357,9 +384,9 @@ Overfull \hbox (2.63765pt too wide) in paragraph at lines 5--5
 \tf@lof=\write4
 \openout4 = `BA.lof'.
 
- [20
+ [22
 
-] [21
+] [23
 
 ] (BA.aux)
 
@@ -367,10 +394,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2815 strings out of 492970
- 40248 string characters out of 3126595
- 123406 words of memory out of 3000000
- 6630 multiletter control sequences out of 15000+200000
+ 2825 strings out of 492970
+ 40456 string characters out of 3126595
+ 123409 words of memory out of 3000000
+ 6638 multiletter control sequences out of 15000+200000
  9763 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,1431b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -384,9 +411,9 @@ x/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C
 :/Users/Felix/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Users/Felix/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmti12.pfb>
-Output written on BA.pdf (21 pages, 796674 bytes).
+Output written on BA.pdf (23 pages, 891052 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 151 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

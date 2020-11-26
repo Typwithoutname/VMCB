@@ -1,10 +1,12 @@
 \babel@toc {ngerman}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces STM32G031J6M6 als SMD-Baustein}}{6}
-\contentsline {figure}{\numberline {2}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6}}{6}
-\contentsline {figure}{\numberline {3}{\ignorespaces LED Schaltung}}{8}
-\contentsline {figure}{\numberline {4}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's }}{10}
-\contentsline {figure}{\numberline {5}{\ignorespaces RC-Tiefpass}}{12}
-\contentsline {figure}{\numberline {6}{\ignorespaces Funktionsweise des Kapazitiven Sensors}}{14}
-\contentsline {figure}{\numberline {7}{\ignorespaces 3D gedrucktes Geh\IeC {\"a}use}}{17}
-\contentsline {figure}{\numberline {8}{\ignorespaces Grundbeh\IeC {\"a}ltnis des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{18}
-\contentsline {figure}{\numberline {9}{\ignorespaces Deckel des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{19}
+\contentsline {figure}{\numberline {1}{\ignorespaces Flussdiagramm zum Ablauf des Hauptprogramms}}{4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Zustandsdiagramm}}{5}
+\contentsline {figure}{\numberline {3}{\ignorespaces STM32G031J6M6 als SMD-Baustein}}{7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6}}{7}
+\contentsline {figure}{\numberline {5}{\ignorespaces LED Schaltung}}{9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's }}{11}
+\contentsline {figure}{\numberline {7}{\ignorespaces RC-Tiefpass}}{13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Funktionsweise des Kapazitiven Sensors}}{15}
+\contentsline {figure}{\numberline {9}{\ignorespaces 3D gedrucktes Geh\IeC {\"a}use}}{19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Grundbeh\IeC {\"a}ltnis des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{20}
+\contentsline {figure}{\numberline {11}{\ignorespaces Deckel des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{21}

@@ -52,7 +52,22 @@ Das Ziel des Projektes war es ein minimalistisches Gerät mit dem STM32G031-Micr
 
 \cleardoublepage
 \section{Funktionsweise}
-%Zustandsdiagramm mit ein paar Worten hinzufügen
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1.2\textwidth]{AblaufMain.jpg}
+ \caption{Flussdiagramm zum Ablauf des Hauptprogramms}
+ \label{fig:Register}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1.2\textwidth]{Zustandsdiagramm.jpg}
+ \caption{Zustandsdiagramm}
+ \label{fig:Register}
+  \end{center}
+\end{figure}
+
+
+
 \newpage
 \section{Microcontroller}
 
@@ -180,7 +195,7 @@ von STM entsprechen. Dadurch konnte auch ohne externes Metallteil eine Berührun
  Ein weiterer wichtiger Punkt ist die Größe des Widerstandes, da dieser der Sensitivität des Sensors entspricht. Bei einem Widerstand von beispielsweise 1MOhm wird nur ein direkter Kontakt erkannt. Wird dieser erhöht so kann auch eine Näherung oder Kontakt über eine kurze Luftlinie bzw. durch ein anderes Material gemessen werden. Dieses Konzept wurde auch bei diesem Projekt umgesetzt, da auch durch das Gehäuse eine Berührung erkannt werden soll. Deswegen wurde ein 4,7MOhm Widerstand verwendet. Zudem wurde das Gehäuse so angepasst, damit herausstehende Zylinder die Kupferflächen des Sensors und das Gehäuse direkt verbinden. Ein großer Luftspalt zwischen diesen beiden Komponenten würde es hier sehr schwierig machen einen Kontakt zu unterscheiden. Aus dem selben Grund wurde auch noch Sekundenkleber verwendet. Bei der Pinbelegung wurde zuerst Pin 4 und 5 gewählt. Der Grund dafür war das die Pins des Mikrocontroller, welche für die Single-Wire-Debug-Schnittstelle zuständig sind unbenutzt bleiben sollten um das debuggen zu ermöglichen. Das Problem hieran war das der Pin 4 der Reset-Pin ist und teilweise beim testen eine Stuck-at-1-Fehler aufwies. Dies ließ den Mikrocontroller im Reset-Zustand verweilen, was den Ablauf des Programmes und das Debuggen verhinderte. Deswegen wurde der Kapazitive Sensor auf Pin 5 und 6 gelegt.
  
 \subsection{Störquellen und Probleme}
-Schlussendlich muss leider gesagt werden, dass einige Probleme nicht perfekt gelöst worden konnte. 
+Schlussendlich muss leider gesagt werden, dass einige Probleme nicht perfekt gelöst werden konnten. Einer ist das weiter schalten des Zustandes ohne Masseverbindung. Der Grund dafür ist das überall andere Elektromagnetische Begebenheiten herrschen, die eine Masseverbindung abfangen würde. Dadurch ist auch die Zeit, die der Empfangspin zum erkennen benötigt und damit der Schwellenwert für die Berührungsentscheidung anders. Deswegen ist der kapazitive Sensor ohne Masseverbindung relativ unverlässlich. Die Lösung dafür wäre ein dynamischer Schwellenwert. Dies würde aber vom Aufwand her weit dem Erwarteten übersteigen. Außerdem wurde festgestellt, dass sich das System selbst beeinflussen kann. So ist es möglich bei eingeschalteter Gelben-Led und Anwesenheit eines Gehäuses ein Sensor-Timeout hervorzurufen. Ein Sensor-Timeout heißt hier das der Empfangspin des Sensors sich zu langsam oder gar nicht ändert. Dieses Problem konnte nicht näher betrachtet werden, da es keine kurzfristige Möglichkeit gab ein Oszilloskop anzuschließen.
 
 
 
