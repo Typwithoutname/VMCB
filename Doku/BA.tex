@@ -145,24 +145,56 @@ Nach der Reihe R0603 ergibt das auch einen Widerstand von 150 $\Omega$.
 \newpage
 \section{Kapazitiver Sensor}
 Als nächstes wird der Kapazitive Sensor erläutert, der für die Weiterschaltung der LED's zuständig ist. Grundsätzlich ist zu sagen, dass alle Kapazitiven Sensor auf einem RC-Oszillator basieren. Kommt es zu einer Berührung oder Näherung durch zum Beispiel einem Finger so wird die Kapazität und somit Lade- und Entladezeit des Oszillators erhöht. Es gibt verschieden Möglichkeiten dies zu detektieren. Nachfolgend sind einige davon aufgelistet, die für das Projekt in Betracht gezogen wurden.
+\subsection{Verschiedene Varianten von Kapazitiven Sensoren}
+\label{VerschiedeneKapSenVar}
+\subsubsection{Komparator}
+Zuerst wird die Komparator-Methode erklärt. Hierbei wird ein Dreieck-Signal an einem RC-Ladeglied angelegt. Durch das RC-Glied wird das Signal abgerundet ähnlich wie in \ref{fig:Tiefpass} zusehen. Dieses Signal und eine feste Gleichspannung wird nun an einen Komparator angelegt. Jedes Mal wenn der Komparator umschaltet wird die vergangene Zeit gemessen. Gibt es eine Berührung so wird das Dreieck-Signal stärker abgerundet und somit verändert sich auch die Zeit die der Komparator zum Umschalten braucht. Durch dieses Prinzip können auch relativ elegant Timer und Interrupts verwendet werden. 
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{RCTiefpass.png}
+ \caption{RC-Tiefpass}
+ \label{fig:Tiefpass}
+  \end{center}
+\end{figure}
 
-\subsection{Komparator}
-Zuerst wurde die Komparator-Methode in Betracht gezogen, da hier relativ schön Interrupts und Timer verwendet werden können. Leider hat der Mikrocontroller STM32G0316J6M6 keinen Komparator, was diese Lösung sehr umständlich machen würde. Deswegen wird nicht weiter darauf eingegangen.
-\subsection{ADC}
-Als nächstes wird die Variante erklärt, die einen Analog-Digital-Wandler verwendet. Hierbei wird ein RC-Ladeglied auf den logischen High-Pegel aufgeladen und nach einer festen Zeit mithilfe des ADC gemessen. Die gemessene Spannung ist dabei abhängig von der Kapazität des Ladeglieds. Ist die Kapazität nicht erhöht, also keine Berührung oder Näherung von zum Beispiel einem Finger, so entlädt sich die Spannung schneller. Gibt es aber eine Berührung oder Näherung so ist die Kapazität höher und die Entladekonstant des RC-Glieds größer, was zu einem zeitlich längeren Spannungsabfall führt. Zusammengefasst ist also die Spannung, die der ADC misst größer wenn eine Berührung oder Näherung statt gefunden hat. Ein großer Vorteil an dieser Variante ist zudem, dass sie nur ein Pin benötigt. Letztendlich wurde sich aber gegen diese Methode entschieden, da der Mikrocontroller nur ein Analog-Digital-Wandler besitzt und das Projekt ausbaufähig, durch beispielswiese einen Sensor, bleiben sollte.
-\subsection{Send- und Receivepins}
-Die letzte und verwendete Variante ist jeweils einen Send- und Receivepin zu benutzen. Dabei wird ein sehr hochohmiger Widerstand zwischen zwei Pins gesetzt, der mit der Kapazität des Receivepins ein RC-Tiefpass realisiert. Verändert man nun den Logik-Pegel am Sendpin so dauert es, wegen dem Tiefpass, eine kurze Zeit bis diese Änderung am Receivepin ankommt. Diese Zeit ist messbar und je nach Kapazität unterschiedlich. Die unterschiedliche Kapazität ist auf ein Metallstück oder Folie, welches am Receivepin befestigt ist, zurückzuführen. Berührt man diese Folie so wird, wie bei der ADC-Variante, die Ladekonstante erhöht und es dauert länger bis eine Änderung des Sendpins am Receivepin erkannt wird. Um eine verlässliche und auswertbare Messung zu erhalten muss dieser Vorgang mehrfach hintereinander durchgeführt werden, damit eventuelle Fehlerquellen rausgemittelt werden. Ein großes Problem ist hierbei, dass der Receivepin nach einer einzelnen Messung nicht auf einen einen vollen High- bzw. Low-Pegel aufgeladen wird, was schlecht für die nächste Messung wäre. Der Receivepin meldet also eine High-Pegel schon bei beispielsweise 1,8V, was das Ende der Messung bedeuten würde, obwohl für den nächsten Zyklus 3,3V an diesem Pin benötigt wird. Deswegen wird der Pin danach als Output deklariert und der entsprechende Pegel angelegt bis die 3,3V bzw. 0V anliegen. Zusätzlich werden Pullup- und Pulldownwiderstände genutzt um diesen Prozess zu beschleunigen. Ein weiterer wichtiger Punkt ist die Größe des Widerstandes, da dieser der Sensitivität des Sensors entspricht. Bei einem Widerstand von beispielsweise 1MOhm wird nur ein direkter Kontakt erkannt. Wird dieser erhöht so kann auch eine Näherung oder Kontakt über eine kurze Luftlinie bzw. durch ein anderes Material gemessen werden.
+\subsubsection{ADC}
+Als nächstes wird die Variante erklärt, die einen Analog-Digital-Wandler verwendet. Hierbei wird ein RC-Ladeglied auf den logischen High-Pegel aufgeladen und nach einer festen Zeit mithilfe des ADC gemessen. Die gemessene Spannung ist dabei abhängig von der Kapazität des Ladeglieds. Ist die Kapazität nicht erhöht, also keine Berührung oder Näherung von zum Beispiel einem Finger, so entlädt sich die Spannung schneller. Gibt es aber eine Berührung oder Näherung so ist die Kapazität höher und die Entladekonstant des RC-Glieds größer, was zu einem zeitlich längeren Spannungsabfall führt. Zusammengefasst ist also die Spannung, die der ADC misst größer wenn eine Berührung oder Näherung statt gefunden hat. 
+\subsubsection{Sende- und Empfangspins}
+Die dritte Variante ist jeweils einen Sende- und Empfangspin zu benutzen. Dabei wird ein sehr hochohmiger Widerstand zwischen zwei Pins gesetzt, der mit der Kapazität des Receivepins ein RC-Tiefpass realisiert. Verändert man nun den Logik-Pegel am Sendpin so dauert es, wegen dem Tiefpass, eine kurze Zeit bis diese Änderung am Receivepin ankommt. Diese Zeit ist messbar und je nach Kapazität unterschiedlich. Die unterschiedliche Kapazität ist auf ein Metallstück oder Folie, welches am Receivepin befestigt ist, zurückzuführen. Berührt man diese Folie so wird, wie bei der ADC-Variante, die Ladekonstante erhöht und es dauert länger bis eine Änderung des Sendpins am Receivepin erkannt wird. Dieser Aufbau ist im Bild \ref{fig:KapSensor} veranschaulicht.
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{KapazitiverSensor.png}
+ \caption{Funktionsweise des Kapazitiven Sensors}
+ \label{fig:KapSensor}
+  \end{center}
+\end{figure}
+
+\subsection{Bewertung}
+\label{Bewertung}
+Als nächstes werden die Varianten aus \ref{VerschiedeneKapSenVar} bewertet. Die erste Lösung ist hier sehr umständlich umzusetzen, da der Mikrocontroller STM32G0316J6M6 keinen Komparator besitzt. Deswegen wurde diese Variante nicht verwendet. Die ADC-Methode hat den großen Vorteil, dass sie nur ein Pin benötigt. Sie bracht jedoch eine zusätzliche Kapazität, was Platz verbraucht und Kosten verursacht. Zudem besitzt der Mikrocontroller nur einen Analog-Digital-Wandler, welcher gegebenenfalls anderweitig für einen Sensor hätte verwendet werden können. Die letzte Variante ist die einfachste Variante. Sie braucht nur einen Widerstand und hat keine besonderen Anforderungen an die Hardware des Mikrocontroller. Der größte Nachteil ist hier aber, dass sie zwei Pins benötigen. Sie können aber trotzdem mehrfach verwendet werden, was in \ref{Energie} näher erklärt wird. Letztendlich wurde sich für die Sende- und Empfangsmethode entschieden.
+
+
+\subsection{Umsetzung}
+Dieser Abschnitt beinhaltet die Umsetzung der Variante, welche unter \ref{Bewertung} ausgewählt wurde. Grundsätzlich ist zu sagen, das der Sensor in der jetzigen Form sehr ungenau und unzuverlässig ist. Um dies zu ändern und eine auswertbare Messung zu erhalten muss dieser Vorgang mehrfach hintereinander durchgeführt werden, damit eventuelle Fehlerquellen heraus gemittelt werden. Ein großes Problem ist zudem, dass der Receivepin nach einer einzelnen Messung nicht auf einen einen vollen High- bzw. Low-Pegel aufgeladen wird, was schlecht für die nächste Messung wäre. Der Receivepin meldet also eine High-Pegel schon bei beispielsweise 1,8V, was das Ende der Messung bedeuten würde, obwohl für den nächsten Zyklus 3,3V an diesem Pin benötigt wird. Deswegen wird der Pin danach als Output deklariert und der entsprechende Pegel angelegt bis dort die 3,3V bzw. 0V anliegen. Zusätzlich werden Pullup- und Pulldownwiderstände genutzt um diesen Prozess zu beschleunigen. Zu Beginn des Projektes wurde der Kapazitive Sensor mit einem Metallteil, welches mit einem Kabel verbunden ist, ausgetestet, was gut funktioniert hat. Nur für eine kompakten und vor allem einfachen Aufbau ist dies groß bzw. zu kompliziert herzustellen. Deswegen wurde auf ein bereits bestehendes Metall zurückgegriffen nämlich das Kupfer der Platine. Es wurden vier kreisförmige Flächen angelegt, die den Designrules 
+%TODO Link zu Designrules einbinden
+von STM entsprechen. Dadurch konnte auch ohne externes Metallteil eine Berührung erkannt werden.
+ Ein weiterer wichtiger Punkt ist die Größe des Widerstandes, da dieser der Sensitivität des Sensors entspricht. Bei einem Widerstand von beispielsweise 1MOhm wird nur ein direkter Kontakt erkannt. Wird dieser erhöht so kann auch eine Näherung oder Kontakt über eine kurze Luftlinie bzw. durch ein anderes Material gemessen werden. Dieses Konzept wurde auch bei diesem Projekt umgesetzt, da auch durch das Gehäuse eine Berührung erkannt werden soll. Deswegen wurde ein 4,7MOhm Widerstand verwendet. Zudem wurde das Gehäuse so angepasst, damit herausstehende Zylinder die Kupferflächen des Sensors und das Gehäuse direkt verbinden. Ein großer Luftspalt zwischen diesen beiden Komponenten würde es hier sehr schwierig machen einen Kontakt zu unterscheiden. Aus dem selben Grund wurde auch noch Sekundenkleber verwendet. Bei der Pinbelegung wurde zuerst Pin 4 und 5 gewählt. Der Grund dafür war das die Pins des Mikrocontroller, welche für die Single-Wire-Debug-Schnittstelle zuständig sind unbenutzt bleiben sollten um das debuggen zu ermöglichen. Das Problem hieran war das der Pin 4 der Reset-Pin ist und teilweise beim testen eine Stuck-at-1-Fehler aufwies. Dies ließ den Mikrocontroller im Reset-Zustand verweilen, was den Ablauf des Programmes und das Debuggen verhinderte. Deswegen wurde der Kapazitive Sensor auf Pin 5 und 6 gelegt.
+ 
+\subsection{Störquellen und Probleme}
+Schlussendlich muss leider gesagt werden, dass einige Probleme nicht perfekt gelöst worden konnte. 
+
+
 
 \newpage
 \section{Energiesparmodus}
-Als nächstes sollen die verschiedenen Möglichkeiten Strom zu sparen betrachtet werden. Der simpelste Ansatz wäre hier ein PWM-Signal für die LED's zu benutzen umso Strom einzusparen. Diese Variante ist bei der verwendeten LED-Schaltung aber nicht ganz einfach, da man Extra-Pins für die Versorgung bräuchte. Eine weitere Variante ist der LowPowerMode des Mikrocontroller. In diesem Modus wird wesentlich weniger Strom verbraucht als normal und es gibt keine Änderung der Output-Pins. Dadurch kann außerdem auch ein Lock-Mechanismus für den Kapazitiven Sensor realisiert werden. Dies ist nützlich um eine versehentliche Änderung des LED-Zustandes zu verhindern. Um in diesem Zustand hinein und wieder herauszukommen wird ein Schalter benutzt der den ReceivePin des Kapazitiven Sensor mit Vcc verbindet, was keinen Extra-Pin benötigt.
+\label{Energie}
+Als nächstes sollen die verschiedenen Möglichkeiten Strom zu sparen betrachtet werden. Der simpelste Ansatz wäre hier ein PWM-Signal für die LED's zu benutzen, um so Strom einzusparen. Diese Variante ist bei der verwendeten LED-Schaltung aber nicht ganz einfach, da man Extra-Pins für die Versorgung bräuchte. Eine weitere Variante ist der LowPowerMode des Mikrocontroller. In diesem Modus wird wesentlich weniger Strom verbraucht als normal und es gibt keine Änderung der Output-Pins. Dadurch kann außerdem auch ein Lock-Mechanismus für den Kapazitiven Sensor realisiert werden. Der LED-Zustand kann also nicht verändert oder weiter geschaltet werden. Dies ist nützlich um eine versehentliche Änderung, durch Berühren oder Störungen zu verhindern. Um in diesem Zustand hinein und wieder herauszukommen wird ein Schalter benutzt der den ReceivePin des Kapazitiven Sensor also Pin 5 benutzt. Wird dieser geschaltet so entsteht eine Verbindung zwischen Pin 5 und Vcc und der Code geht in den Energiesparmodus. Generell wird durch diese Anordnung keine Extra-Pin benötigt. Ein Grund dafür ist, das die Verbindung zu 3,3V zyklisch abgefragt wird.
 
 \begin{center}
 \rowcolors{3}{lightgray}{white}
 \begin{tabularx}{\columnwidth}{XX}
-Normalbetrieb & 8mA \\ 
-Energiesparmodus mit LED & 6,6mA\\
-Energiesparmodus ohne LED & 0,24mA\\
+Normalbetrieb & 7,6mA \\ 
+Energiesparmodus mit LED & 6,2mA\\
+Energiesparmodus ohne LED & 0,24mA
 \label{tab:ADEinton}
 \end{tabularx}
 \end{center}
