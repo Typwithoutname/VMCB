@@ -45,7 +45,7 @@ automark,
 \maketitle
 \cleardoublepage
 \begin{abstract}
-Das Ziel des Projektes war es ein minimalistisches Gerät mit dem STM32G031-Microcontroller zu entwickeln, welches die Stimmung des Trägers mithilfe von LED's darstellt und dabei party-tauglich ist. Aus diesem Vorgaben ist das entwickelte Gerät entstanden. Es wird mit einer Knopfzelle betrieben und lässt sich durch eine Berührung mit dem Finger an die Vorderseite des Gehäuses zyklisch, wie eine normale Ampel, weiterschalten, dies wird durch einen kapazitiven Sensor ermöglicht. Außerdem ist noch ein Schalter verbaut, der die "Stimmung" einrasten lässt um beispielsweise ein versehentliches Weiterschalten beim Tanzen zu verhindern. Zudem ermöglicht der Schalter eine Reduktion des Stromverbrauchs, wodurch der Partyspaß noch länger anhält.
+Das Ziel des Projektes war es ein minimalistisches Gerät mit dem STM32G031-Microcontroller zu entwickeln, welches die Stimmung des Trägers mithilfe von LED's darstellt und dabei party-tauglich ist. Aus diesem Vorgaben ist das entwickelte Gerät entstanden. Es wird mit einer Knopfzelle betrieben und lässt sich durch eine Berührung mit dem Finger an die Vorderseite des Gehäuses zyklisch, wie eine normale Ampel, weiterschalten, dies wird durch einen kapazitiven Sensor ermöglicht. Außerdem ist noch ein Schalter verbaut, der die \glqq Stimmung\grqq{} einrasten lässt um beispielsweise ein versehentliches Weiterschalten beim Tanzen zu verhindern. Zudem ermöglicht der Schalter eine Reduktion des Stromverbrauchs, wodurch der Partyspaß noch länger anhält.
 \end{abstract}
 \cleardoublepage
 \tableofcontents
@@ -101,23 +101,22 @@ Als nächstes wird die Möglichkeit eine WS2812b-LED zu verwenden betrachtet. Si
 \newpage
 
 Letztendlich war am interessantesten eine Schaltung, die mit möglichst wenig Pins möglichst viele LED's ansteuert. Um dies zu ermöglichen wurde eine Schaltung entworfen, die mit Hilfe von Input und Output dies ermöglicht. Dabei können bis zu 4 LED's mit 2 Pins angesteuert werden. In der vorliegenden Ampelschaltung sind nur 3 LED's notwendig, allerdings könnte die 4. noch zwischen Ground und LED1 gehängt werden, wie parallel dazu LED3. Also gibt es 3 verschiedene Zustände, die im folgenden erklärt werden:
-\subsubsection{LED1 leuchtet}
-Der Pin "PB7-LEDs" wird als Output auf "LOW" gesetzt. Dadurch fließt ein Strom zwischen 3.3V und dem Output "LOW" $\rightarrow$ LED1 leuchtet Damit die anderen LEDs nicht leuchten, wird "PA8-LEDs" auf Input gesetzt, dadurch wird er hochohmig und im linken Zweig fließt kein Strom.
-\subsubsection{LED2 leuchtet}
-Der Pin "PA8-LEDs" wird als Output auf "LOW" gesetzt. Dadurch fließt ein Strom zwischen 3.3V und dem Output "LOW" $\rightarrow$ LED2 leuchtet Damit die anderen LEDs nicht leuchten, wird "PB7-LEDs" auf Input gesetzt, dadurch wird er hochohmig und im rechten Zweig fließt kein Strom.
-\subsubsection{LED3 leuchtet}
-Der Pin "PA8-LEDs" wird als Output auf "HIGH" gesetzt. Dadurch fließt ein Strom zwischen dem Output "HIGH" und dem Ground $\rightarrow$ LED3 leuchtet Damit die anderen LEDs nicht leuchten, wird "PB7-LEDs" auf Input gesetzt, dadurch wird er hochohmig und im rechten Zweig fließt kein Strom.
-
+\subsubsection{rote LED}
+Der Pin \glqq PB7-LEDs\grqq{} wird als Output auf \glqq LOW\grqq{} gesetzt. Dadurch fließt ein Strom zwischen 3.3 V und dem Output \glqq LOW\grqq{} $\rightarrow$ LED1 leuchtet. Damit die anderen LEDs nicht leuchten, wird \glqq PA8-LEDs\grqq{} auf Input gesetzt, dadurch wird er hochohmig und im linken Zweig fließt kein Strom.
+\subsubsection{gelbe LED}
+Um die gelbe LED2 leuchten zu lassen wird nun der Pin \glqq PA8-LEDs\grqq{} wird als Output auf \glqq LOW\grqq{} gesetzt. Die Folge ist, dass Strom zwischen 3.3 V und \glqq PA8-LEDs\grqq{} fließt $\rightarrow$ LED2 leuchtet. Um zu erreichen, dass auch nur LED2 leuchtet wird \glqq PB7-LEDs\grqq{} als Input gesetzt und somit hochohmig $\rightarrow$ im rechten Zweig fließt kein Strom.
+\subsubsection{grüne LED}
+Indem der Pin \glqq PA8-LEDs\grqq{} als Output auf \glqq HIGH\grqq{} gelegt wird, fließt Strom zwischen \glqq HIGH\grqq{} und Ground $\rightarrow$ LED3 leuchtet. Um die rote und gelbe LED nicht zu aktivieren, wird \glqq PB7-LEDs\grqq{} als Input gesetzt und wiederum hochohmig. 
 \subsubsection{keine LED leuchtet}
-Der Pin "PA8-LEDs" wird als Input deklariert, dadurch fließt im linken Zweig kein Strom. Wenn nun auch noch "PB7-LEDs" auf Input gesetzt wird, wird auch dieser Pin hochohmig und im rechten Zweig fließt kein Strom. Dadurch dass weder im linken noch im rechten Zweig ein Stromfluss entsteht sind alle LED aus, was dem letzten Zustand im Zyklus entspricht, bevor es wieder von vorne los geht mit der roten LED1.
+Der Pin \glqq PA8-LEDs\grqq{} wird als Input deklariert, so fließt im linken Zweig kein Strom. Wenn nun auch noch \glqq PB7-LEDs\grqq{} auf Input gesetzt wird, wird auch dieser Pin hochohmig und im rechten Zweig fließt kein Strom. Wenn weder im linken noch im rechten Zweig ein Stromfluss entsteht sind alle LEDs aus, was dem letzten Zustand im Zyklus entspricht, bevor es wieder von vorne los geht mit der roten LED1.
 
 \begin{center}
 \rowcolors{3}{lightgray}{white}
 \begin{tabularx}{\columnwidth}{XXXl}
 Leuchtet &Zustand &PA8-LEDs &PB7-LEDs \\ \hline
-LED1 & grün & IN &OUT-LOW\\
+LED1 & rot & IN &OUT$-$LOW\\
 LED2 & gelb & OUT$-$LOW &IN\\
-LED3 & rot & OUT$-$HIGH & IN\\
+LED3 & grün & OUT$-$HIGH & IN\\
 keine LED & aus & IN & IN
  
 \label{tab:ZusammenfassungderFunktionsweisederLEDSchaltung}
@@ -225,14 +224,20 @@ Energiesparmodus ohne LED & 0,24mA
 \subsection{Layout}
 
 \subsection{Gehäuse}
-Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächst in SolidEdge entworfen und dann mithilfe eines 3D-Druckers gedruckt wurden.
-\begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1\textwidth]{Gehauuse_Stimmungslicht.jpg}
- \caption{3D gedrucktes Gehäuse}
- \label{fig:Register}
-  \end{center}
-\end{figure}
+Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächst in SolidWorks entworfen und dann mit Hilfe eines 3D-Druckers gedruckt wurden. Dabei hat sich das Gehäuse im Laufe der Projekts schrittweise weiter entwickelt. Der Deckel und der Behälter wurden in getrennten Projekten entworfen. 
 
+\paragraph{Grundbehältnis} $~$ \\
+Das Grundbehältnis wurde im ersten Schritt einfach als eine Skizze gezeichnet, die anschließend als Rotation 360° ausgeprägt wird. So entsteht das Grundgerüst eines nach oben geöffneten Hohlzylinders, der eine exakte Passung für die runde Platine darstellt. Es wurde eine Stärke von 2 mm für die Außenwand gewählt. 
+
+Als nächstes ist es wichtig noch den Schalter für den Energiesparmodus von außen bedienen zu können. Dafür ist eine Aussparung im Gehäuse notwendig. Am einfachsten ist es die Aussparung bis zum oberen Rand durchzuführen. Die Aussparung besitzt eine Breite von 11 mm, wodurch ein 1 mm Rand auf beiden Seiten entsteht, da der Schalter eine Breite von 9 mm nach Datenblatt hat. 
+
+Die Aussparung muss allerdings an der richtigen Höhe und Stelle für den Schalter platziert werden. Um das zu ermöglichen braucht die Platine eine Halterung, die sie im richtigen Abstand zur Aussparung hält. Die einfachste Lösung hierfür ist eine Art Ring, der innen im Hohlzylinder angebracht wird. Dafür wurde die anfängliche Skizze des Hohlzylinders angepasst mit einer 1.5 mm in den Zylinder hinein ragenden Kante. Diese Kante ist auf der richtigen Höhe, damit darunter noch der Batteriehalter Platz hat. Die Aussparung für den Schalter geht dann bis knapp über dieser Kante.
+
+Um nun auch den Schalter an der richtigen Stelle zu haben ist es nötig, dass die Platine sich nicht verdreht. Das typische Mittel dafür ist eine kleine Nut, die eine Verdrehung verhindert. Somit wurde eine kleine Nut direkt oberhalb der Kante eingefügt, die so auf der Höhe der Platine liegt. Die Nut ist an der Stelle platziert, wo am meisten Platz auf der Platine vorhanden ist. Also am unteren Rand der Platine, unterhalb der Ground-Verbindung des Batteriehalters also 90° versetzt zur Aussparung des Schalters. 
+
+Nun ist die grundlegende Form des Behälters abgeschlossen. 
+
+Als letzte Verbesserung haben wir entschieden, die Debug-Pins nicht mehr nach oben anzulöten, sondern nach unten. Dadurch wird der Behälter in seiner Höhe reduziert und so handlicher und besser zu befestigen. 
 
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{gehauuse_4.pdf}
@@ -241,6 +246,11 @@ Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächs
   \end{center}
 \end{figure}
 
+\paragraph{Deckel} 
+
+
+
+
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{Deckel.pdf}
  \caption{Deckel des Gehäuses mit Bemaßungen}
@@ -248,6 +258,12 @@ Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächs
   \end{center}
 \end{figure}
 
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{Gehauuse_Stimmungslicht.jpg}
+ \caption{3D gedrucktes Gehäuse}
+ \label{fig:Register}
+  \end{center}
+\end{figure}
 
 \section{Fazit}
 

@@ -1,25 +1,27 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Funktionsweise}{4}
-\contentsline {section}{\numberline {2}Microcontroller}{6}
-\contentsline {section}{\numberline {3}LED}{8}
-\contentsline {subsection}{\numberline {3.1}WS2812b}{8}
-\contentsline {subsection}{\numberline {3.2}LED-Schaltung}{9}
-\contentsline {subsubsection}{\numberline {3.2.1}LED1 leuchtet}{10}
-\contentsline {subsubsection}{\numberline {3.2.2}LED2 leuchtet}{10}
-\contentsline {subsubsection}{\numberline {3.2.3}LED3 leuchtet}{10}
-\contentsline {subsubsection}{\numberline {3.2.4}keine LED leuchtet}{10}
-\contentsline {subsection}{\numberline {3.3}Auswahl der Widerst\IeC {\"a}nde f\IeC {\"u}r die LED-Schaltung}{11}
-\contentsline {section}{\numberline {4}Kapazitiver Sensor}{13}
-\contentsline {subsection}{\numberline {4.1}Verschiedene Varianten von Kapazitiven Sensoren}{13}
-\contentsline {subsubsection}{\numberline {4.1.1}Komparator}{13}
-\contentsline {subsubsection}{\numberline {4.1.2}ADC}{14}
-\contentsline {subsubsection}{\numberline {4.1.3}Sende- und Empfangspins}{14}
-\contentsline {subsection}{\numberline {4.2}Bewertung}{14}
-\contentsline {subsection}{\numberline {4.3}Umsetzung}{16}
-\contentsline {subsection}{\numberline {4.4}St\IeC {\"o}rquellen und Probleme}{17}
-\contentsline {section}{\numberline {5}Energiesparmodus}{18}
-\contentsline {section}{\numberline {6}Schaltplan, Layout und Geh\IeC {\"a}use}{19}
-\contentsline {subsection}{\numberline {6.1}Schaltplan}{19}
-\contentsline {subsection}{\numberline {6.2}Layout}{19}
-\contentsline {subsection}{\numberline {6.3}Geh\IeC {\"a}use}{19}
-\contentsline {section}{\numberline {7}Fazit}{19}
+\contentsline {section}{\numberline {1}Funktionsweise}{4}%
+\contentsline {section}{\numberline {2}Microcontroller}{6}%
+\contentsline {section}{\numberline {3}LED}{8}%
+\contentsline {subsection}{\numberline {3.1}WS2812b}{8}%
+\contentsline {subsection}{\numberline {3.2}LED-Schaltung}{9}%
+\contentsline {subsubsection}{\numberline {3.2.1}rote LED}{10}%
+\contentsline {subsubsection}{\numberline {3.2.2}gelbe LED}{10}%
+\contentsline {subsubsection}{\numberline {3.2.3}grüne LED}{10}%
+\contentsline {subsubsection}{\numberline {3.2.4}keine LED leuchtet}{10}%
+\contentsline {subsection}{\numberline {3.3}Auswahl der Widerstände für die LED-Schaltung}{11}%
+\contentsline {section}{\numberline {4}Kapazitiver Sensor}{13}%
+\contentsline {subsection}{\numberline {4.1}Verschiedene Varianten von Kapazitiven Sensoren}{13}%
+\contentsline {subsubsection}{\numberline {4.1.1}Komparator}{13}%
+\contentsline {subsubsection}{\numberline {4.1.2}ADC}{14}%
+\contentsline {subsubsection}{\numberline {4.1.3}Sende- und Empfangspins}{14}%
+\contentsline {subsection}{\numberline {4.2}Bewertung}{14}%
+\contentsline {subsection}{\numberline {4.3}Umsetzung}{16}%
+\contentsline {subsection}{\numberline {4.4}Störquellen und Probleme}{17}%
+\contentsline {section}{\numberline {5}Energiesparmodus}{18}%
+\contentsline {section}{\numberline {6}Schaltplan, Layout und Gehäuse}{19}%
+\contentsline {subsection}{\numberline {6.1}Schaltplan}{19}%
+\contentsline {subsection}{\numberline {6.2}Layout}{19}%
+\contentsline {subsection}{\numberline {6.3}Gehäuse}{19}%
+\contentsline {paragraph}{Grundbehältnis}{19}%
+\contentsline {paragraph}{Deckel}{20}%
+\contentsline {section}{\numberline {7}Fazit}{20}%
