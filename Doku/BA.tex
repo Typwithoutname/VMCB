@@ -218,13 +218,73 @@ Energiesparmodus ohne LED & 0,24mA
 
 
 \newpage
-\section{Schaltplan, Layout und Gehäuse}
+\section{Schaltplan und Layout}
+
+Die Gestaltung der Platine setzt sich zusammen aus der Erstellung des Schaltplans, nach den zuvor ermittelten Funktionen. Das Layout wird anhand des Schaltplans erstellt und mit den gegebenen Vorgaben für die äußere Erscheinung der Ampel.
+
 \subsection{Schaltplan}
+
+Als erstes wird der Schaltplan in 6 verschiedene Teile unterteilt um das Folgende übersichtlicher zu gestalten. Diese Teile sind: Batterieversorgung, kapazitiver Sensor, LED-Schaltung, Energiesparmodus-Schalter, Connector, Microcontroller
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1.4\textwidth,angle=90]{Schaltplan.pdf}
+ \caption{Schaltplan}
+ \label{fig:Schaltplan}
+  \end{center}
+\end{figure}
+
+\paragraph{Batterieversorgung} $~$ \\
+
+Da es sich um ein möglichst minimalistisches System handelt, ist ein Knopfzellenbetrieb notwendig. Eine passende Batteriegröße dafür ist 3032 und es gibt unterschiedliche Batteriehalter für eine solche Batterie. Aus diesem Grund wurde der Batteriehalter nach dem einem passenden Package für KiCAD ausgewählt, da das für die Layouterstellung einfacher ist. Die Wahl viel somit auf BATTERIEHALTER NAME. 
+
+Der Batteriehalter befindet sich in der linken oberen Ecke von Abbildung \ref{fig:Schaltplan}. Das Package war von den +/- Belegungen vertauscht, was allerdings später beim Layout entdeckt wurde.
+
+\paragraph{kapazitiver Sensor} $~$ \\
+
+\paragraph{LED-Schaltung} $~$ \\
+
+Die LED-Schaltung ist an dieser Stelle recht simpel zu erklären, da auf die Hintergründe ihrer Entstehung bereits in Kapitel 3.2 eingegangen wurde. 
+Die Pins des Microcontrollers wurden danach ausgesucht, dass es sich dabei nicht um Debug-Pins handelt und aus diesem Grund wurden Pin 5 und 6 gewählt.
+
+\paragraph{Energiesparmodus-Schalter} $~$ \\
+\paragraph{Connector} $~$ \\
+\paragraph{Microcontroller} $~$ \\
+
+
 
 \subsection{Layout}
 
-\subsection{Gehäuse}
+\paragraph{Batterieversorgung} $~$ \\
+
+\paragraph{kapazitiver Sensor} $~$ \\
+
+\paragraph{LED-Schaltung} $~$ \\
+
+\paragraph{Energiesparmodus-Schalter} $~$ \\
+\paragraph{Connector} $~$ \\
+\paragraph{Microcontroller} $~$ \\
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{Layout_Front.png}
+ \caption{Layout - Front Layer}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{Layout_Back.png}
+ \caption{Layout - Back Layer}
+  \end{center}
+\end{figure}
+
+\section{Gehäuse}
 Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächst in SolidWorks entworfen und dann mit Hilfe eines 3D-Druckers gedruckt wurden. Dabei hat sich das Gehäuse im Laufe der Projekts schrittweise weiter entwickelt. Der Deckel und der Behälter wurden in getrennten Projekten entworfen. 
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1\textwidth]{Gehauuse_Stimmungslicht.jpg}
+ \caption{3D gedrucktes Gehäuse}
+ \label{fig:Register}
+  \end{center}
+\end{figure}
 
 \paragraph{Grundbehältnis} $~$ \\
 Das Grundbehältnis wurde im ersten Schritt einfach als eine Skizze gezeichnet, die anschließend als Rotation 360° ausgeprägt wird. So entsteht das Grundgerüst eines nach oben geöffneten Hohlzylinders, der eine exakte Passung für die runde Platine darstellt. Es wurde eine Stärke von 2 mm für die Außenwand gewählt. 
@@ -246,10 +306,13 @@ Als letzte Verbesserung haben wir entschieden, die Debug-Pins nicht mehr nach ob
   \end{center}
 \end{figure}
 
-\paragraph{Deckel} 
+\paragraph{Deckel} $~$ \\
 
+Das Grundgerüst des Deckels ist mit dem Grundbehältnis identisch. Auch der Deckel besteht aus einem einseitig geöffneten Hohlzylinder. Die Stärke des Zylinders beträgt dabei, wie zuvor, 2 mm. Zuerst muss hierfür eine Skizze erstellt werden, die anschließend mit einer Rotation 360° 3D-ausgeprägt wird. Die Höhe des Zylinders ist dabei auf die Höhe des Energiesparschalters angepasst. 
 
+Im nächsten Schritt wurde der lineare Ausschnitt erstellt, der alle LED's umfasst und somit die Sicht auf die Ampel ermöglicht. Der Ausschnitt ist zentriert und etwas größer als der Abstand der LED's. 
 
+In der ersten Version des Gehäuses war hiermit der Deckel fertig. Es folgte jedoch eine erneute Überarbeitung, weil ein direkter Kontakt zwischen Sensorflächen und dem Gehäuse für die Funktionalität des kapazitiven Sensors notwendig war. Dafür wurden kleine Vollzylinder erstellt, die exakt an derselben Stelle positioniert sind und dieselben Durchmesser haben, wie die Sensorflächen. Die Höhe der Zylinder ist dabei so groß, dass wenn der Deckel sich auf dem Grundbehältnis befindet sie genau auf der Platine aufliegen.  
 
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{Deckel.pdf}
@@ -258,12 +321,9 @@ Als letzte Verbesserung haben wir entschieden, die Debug-Pins nicht mehr nach ob
   \end{center}
 \end{figure}
 
-\begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1\textwidth]{Gehauuse_Stimmungslicht.jpg}
- \caption{3D gedrucktes Gehäuse}
- \label{fig:Register}
-  \end{center}
-\end{figure}
+\paragraph{Befestigung} $~$ \\
+
+Die Befestigung für die Ampelschaltung soll möglichst einfach und leicht reproduzierbar sein. Deshalb erschien eine Broschenadel am einfachsten. Diese sind gut für die Befestigung auf Höhe des Brustbereichs und können in passenden Größen bestellt werden mit Klebesockel. 
 
 \section{Fazit}
 

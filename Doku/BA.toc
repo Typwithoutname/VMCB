@@ -18,10 +18,23 @@
 \contentsline {subsection}{\numberline {4.3}Umsetzung}{16}%
 \contentsline {subsection}{\numberline {4.4}Störquellen und Probleme}{17}%
 \contentsline {section}{\numberline {5}Energiesparmodus}{18}%
-\contentsline {section}{\numberline {6}Schaltplan, Layout und Gehäuse}{19}%
+\contentsline {section}{\numberline {6}Schaltplan und Layout}{19}%
 \contentsline {subsection}{\numberline {6.1}Schaltplan}{19}%
-\contentsline {subsection}{\numberline {6.2}Layout}{19}%
-\contentsline {subsection}{\numberline {6.3}Gehäuse}{19}%
-\contentsline {paragraph}{Grundbehältnis}{19}%
-\contentsline {paragraph}{Deckel}{20}%
-\contentsline {section}{\numberline {7}Fazit}{20}%
+\contentsline {paragraph}{Batterieversorgung}{19}%
+\contentsline {paragraph}{kapazitiver Sensor}{19}%
+\contentsline {paragraph}{LED-Schaltung}{19}%
+\contentsline {paragraph}{Energiesparmodus-Schalter}{19}%
+\contentsline {paragraph}{Connector}{21}%
+\contentsline {paragraph}{Microcontroller}{21}%
+\contentsline {subsection}{\numberline {6.2}Layout}{21}%
+\contentsline {paragraph}{Batterieversorgung}{21}%
+\contentsline {paragraph}{kapazitiver Sensor}{21}%
+\contentsline {paragraph}{LED-Schaltung}{21}%
+\contentsline {paragraph}{Energiesparmodus-Schalter}{21}%
+\contentsline {paragraph}{Connector}{21}%
+\contentsline {paragraph}{Microcontroller}{21}%
+\contentsline {section}{\numberline {7}Gehäuse}{21}%
+\contentsline {paragraph}{Grundbehältnis}{21}%
+\contentsline {paragraph}{Deckel}{25}%
+\contentsline {paragraph}{Befestigung}{27}%
+\contentsline {section}{\numberline {8}Fazit}{27}%
