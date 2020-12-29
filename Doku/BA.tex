@@ -176,7 +176,7 @@ Als nächstes wird die Variante erklärt, die einen Analog-Digital-Wandler verwe
 Die dritte Variante ist jeweils einen Sende- und Empfangspin zu benutzen. Dabei wird ein sehr hochohmiger Widerstand zwischen zwei Pins gesetzt, der mit der Kapazität des Receivepins ein RC-Tiefpass realisiert. Verändert man nun den Logik-Pegel am Sendpin so dauert es, wegen dem Tiefpass, eine kurze Zeit bis diese Änderung am Receivepin ankommt. Diese Zeit ist messbar und je nach Kapazität unterschiedlich. Die unterschiedliche Kapazität ist auf ein Metallstück oder Folie, welches am Receivepin befestigt ist, zurückzuführen. Berührt man diese Folie so wird, wie bei der ADC-Variante, die Ladekonstante erhöht und es dauert länger bis eine Änderung des Sendpins am Receivepin erkannt wird. Dieser Aufbau ist im Bild \ref{fig:KapSensor} veranschaulicht.
 
 \begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1\textwidth]{KapazitiverSensor.png}
+ \begin{center} \includegraphics[width=0.6\textwidth]{KapazitiverSensor.png}
  \caption{Funktionsweise des Kapazitiven Sensors}
  \label{fig:KapSensor}
   \end{center}
@@ -226,20 +226,16 @@ Die Gestaltung der Platine setzt sich zusammen aus der Erstellung des Schaltplan
 
 Als erstes wird der Schaltplan in 6 verschiedene Teile unterteilt um das Folgende übersichtlicher zu gestalten. Diese Teile sind: Batterieversorgung, kapazitiver Sensor, LED-Schaltung, Energiesparmodus-Schalter, Connector, Microcontroller
 
-\begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1.4\textwidth,angle=90]{Schaltplan.pdf}
- \caption{Schaltplan}
- \label{fig:Schaltplan}
-  \end{center}
-\end{figure}
 
 \paragraph{Batterieversorgung} $~$ \\
 
-Da es sich um ein möglichst minimalistisches System handelt, ist ein Knopfzellenbetrieb notwendig. Eine passende Batteriegröße dafür ist 3032 und es gibt unterschiedliche Batteriehalter für eine solche Batterie. Aus diesem Grund wurde der Batteriehalter nach dem einem passenden Package für KiCAD ausgewählt, da das für die Layouterstellung einfacher ist. Die Wahl viel somit auf BATTERIEHALTER NAME. 
+Da es sich um ein möglichst minimalistisches System handelt, ist ein Knopfzellenbetrieb notwendig. Eine passende Batteriegröße dafür ist 3032 und es gibt unterschiedliche Batteriehalter für eine solche Batterie. Aus diesem Grund wurde der Batteriehalter nach dem einem passenden Package für KiCAD ausgewählt, da das für die Layouterstellung einfacher ist. Die Wahl viel somit auf ein Modell von Renata. 
 
 Der Batteriehalter befindet sich in der linken oberen Ecke von Abbildung \ref{fig:Schaltplan}. Das Package war von den +/- Belegungen vertauscht, was allerdings später beim Layout entdeckt wurde.
 
 \paragraph{kapazitiver Sensor} $~$ \\
+
+Der kapazitiver Sensor wurde wie nach Kapitel 4.1.3 mit einem Sende- und Empfangspin realisiert. Sie sind an Pin 5 und 6 des Microcontrollers angeschlossen. Als nächstes wurde ein Jumper eingesetzt um die Möglichkeit offen zu halten den kapazitiven Sensor entweder mit Pads oder einem Connector zu verbinden. Der Connector war als gesicherte Methode gedacht, bei der eine Metallplatte angeschlossen wird als Sensor. Dies war später allerdings nicht notwendig, da der Sensor mit den Pads funktioniert hat und deshalb wurde auch ein Widerstand von 4.7 MOhm ausgewählt, der dazu passt.
 
 \paragraph{LED-Schaltung} $~$ \\
 
@@ -247,37 +243,84 @@ Die LED-Schaltung ist an dieser Stelle recht simpel zu erklären, da auf die Hin
 Die Pins des Microcontrollers wurden danach ausgesucht, dass es sich dabei nicht um Debug-Pins handelt und aus diesem Grund wurden Pin 5 und 6 gewählt.
 
 \paragraph{Energiesparmodus-Schalter} $~$ \\
+
+Es wurde ein Schalter ohne Durchkontaktierung ausgewählt (JS102011SAQN von C \& K Components). Der Schalter soll dabei die funktionierende Schaltung nicht beeinträchtigen, aber den Energiesparmodus aktivieren. Aus diesem Grund ist der dritte Kontakt des Schalters nicht angeschlossen und ermöglicht den normalen Betrieb. Wenn der Schalter \glqq aktiviert\grqq{} ist, ist er über Pin 5 mit dem Microcontroller verbunden und dadurch wird der Energiesparmodus eingeschaltet. 
+
+
 \paragraph{Connector} $~$ \\
+
+Der Connector ermöglicht lediglich den Microcontroller mit dem Code zu bespielen. Es ist die einfachste Möglichkeit den Microcontroller mit dem USB-Stick ST-Link V2 zu programmieren. Die minimale Anzahl an Pins ist hierbei 4 für Ground, Reset, SWCLK und SWDIO.
+
 \paragraph{Microcontroller} $~$ \\
 
+Der Microcontroller ist zum einen mit Ground und 3.3 V von der Batterie verbunden. Eine weitere Belegung von Pin 4 und 8 führte zu Fehlern, aus diesem Grund werden nur die anderen Pins überbelegt. Dies war notwendig, da der Microcontroller lediglich 8 Pins zur Verfügung stellt und bereits 4 wegfallen. Die übrig gebliebenen 4 müssen also 6 Funktionen ausführen. 
 
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1.4\textwidth,angle=90]{Schaltplan.pdf}
+ \caption{Schaltplan}
+ \label{fig:Schaltplan}
+  \end{center}
+\end{figure}
+
+\newpage
 
 \subsection{Layout}
 
+Das Layout wird anhand des Schaltplans mit KiCAD erstellt, dabei werden die entsprechenden Bauteile ausgewählt und dann in PCB überliefert. Als erstes wird der Umriss der Platine als Kreis erstellt mit einem Durchmesser von unter 4 cm. Es müssen auch die Leitungsparameter festgelegt werden, die so ausgewählt wurden, dass eine Fräsung bei der OTH möglich war. Also breiter als normalerweise bei dem vorhandenen Strom notwendig gewesen wäre. Nun gilt es die Bauteile zu platzieren. 
+
 \paragraph{Batterieversorgung} $~$ \\
 
-\paragraph{kapazitiver Sensor} $~$ \\
+Es ist wenig Platz auf der Platine vorhanden, deshalb ist der Batteriehalter auf der Rückseite platziert. Man kann seine Durchkontaktierungen oben doppelt und unten als ein Kontakt in den Abbildungen \ref{fig:Front} und \ref{fig:Back} erkennen. 
 
 \paragraph{LED-Schaltung} $~$ \\
 
+Die LEDs wurden als nächstes platziert, da sie die Ampelschaltung anzeigen. Alle anderen Bauteile werden um sie herum platziert.
+
 \paragraph{Energiesparmodus-Schalter} $~$ \\
-\paragraph{Connector} $~$ \\
+
+Der Schalter für den Energiesparmodus ist seitlich direkt am Rand der Platine platziert, damit er von außen bedient werden kann. 
+
 \paragraph{Microcontroller} $~$ \\
 
+Da die meisten Leitungen zum Microcontroller führen ist es sinnvoll diesen möglichst mittig zu platzieren um lange Leitungen zu vermeiden. In diesem Fall bedeutet das nur allerdings nur so mittig wie möglich, da sich die LEDs bereits dort aus optischen Gründen befinden. 
+
+\paragraph{Connector} $~$ \\
+
+Der Connector befindet sich möglichst neben dem Microcontroller damit die Leitungen nicht zu lang werden.
+
+\paragraph{kapazitiver Sensor} $~$ \\
+
+Der kapazitive Sensor befindet sich sozusagen auf dem übrig gebliebenen Platz. Da die Sensorflächen äußerst groß sind und nicht zu nah an den Connectoren aufgrund von Störungen platziert werden sollten, ist der einzige Platz oberhalb der LEDs. 
+
+Dies ist nur die erste Hälfte des Sensors. Der Connector muss möglichst weit am Rand sein, da der Draht, der nach Außen zu einer Metallplatte führt nicht unnötig lang sein muss. 
+
+Dadurch ist es schwierig die Sensorpads an den Microcontroller anzuschließen, da sie weit voneinander entfernt sind. So wurde auf den Back-Layer, wie in Abbildung \ref{fig:Back} für die Leitungen zurückgegriffen. Den Pads wurde außerdem eine Durchkontaktierung hinzugefügt.\\
+
+
+Um Überschneidungen in den Leitungen zu vermeiden wurden noch 2 zusätzliche Widerstände mit 0 Ohm hinzugefügt. Alle Leitungen laufen über das Front-Layer wie in Abbildung \ref{fig:Front} zu erkennen ist. Lediglich der kapazitive Sensor wurde rückseitig (Abbildung \ref{fig:Back}) verdrahtet. 
+
+Im letzten Schritt wird die Platine als Massefläche gesetzt um Störungen zu vermeiden. Das war aufgrund der runden Form nur durch das Nachzeichnen dieser Form möglich. 
+
 \begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1\textwidth]{Layout_Front.png}
+ \begin{center}\includegraphics[width=0.6\textwidth]{Layout_Front.png}
  \caption{Layout - Front Layer}
-  \end{center}
+ \label{fig:Front}
+ \end{center}
 \end{figure}
 
 \begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1\textwidth]{Layout_Back.png}
+ \begin{center} \includegraphics[width=0.6\textwidth]{Layout_Back.png}
  \caption{Layout - Back Layer}
+ \label{fig:Back}
   \end{center}
 \end{figure}
+
+\newpage
 
 \section{Gehäuse}
 Das Gehäuse besteht aus einem Grundbehältnis und einem Deckel, welche zunächst in SolidWorks entworfen und dann mit Hilfe eines 3D-Druckers gedruckt wurden. Dabei hat sich das Gehäuse im Laufe der Projekts schrittweise weiter entwickelt. Der Deckel und der Behälter wurden in getrennten Projekten entworfen. 
+
+Die zugehörigen Abbildungen \ref{fig:Grundbe} und \ref{fig:Deckel} wurden mit Solid Edge erstellt und zeigen die Bemaßungen des im folgenden beschriebenen Gehäuses.
 
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1\textwidth]{Gehauuse_Stimmungslicht.jpg}
@@ -299,13 +342,6 @@ Nun ist die grundlegende Form des Behälters abgeschlossen.
 
 Als letzte Verbesserung haben wir entschieden, die Debug-Pins nicht mehr nach oben anzulöten, sondern nach unten. Dadurch wird der Behälter in seiner Höhe reduziert und so handlicher und besser zu befestigen. 
 
-\begin{figure}[!hbpt]
- \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{gehauuse_4.pdf}
- \caption{Grundbehältnis des Gehäuses mit Bemaßungen}
- \label{fig:Register}
-  \end{center}
-\end{figure}
-
 \paragraph{Deckel} $~$ \\
 
 Das Grundgerüst des Deckels ist mit dem Grundbehältnis identisch. Auch der Deckel besteht aus einem einseitig geöffneten Hohlzylinder. Die Stärke des Zylinders beträgt dabei, wie zuvor, 2 mm. Zuerst muss hierfür eine Skizze erstellt werden, die anschließend mit einer Rotation 360° 3D-ausgeprägt wird. Die Höhe des Zylinders ist dabei auf die Höhe des Energiesparschalters angepasst. 
@@ -314,6 +350,18 @@ Im nächsten Schritt wurde der lineare Ausschnitt erstellt, der alle LED's umfas
 
 In der ersten Version des Gehäuses war hiermit der Deckel fertig. Es folgte jedoch eine erneute Überarbeitung, weil ein direkter Kontakt zwischen Sensorflächen und dem Gehäuse für die Funktionalität des kapazitiven Sensors notwendig war. Dafür wurden kleine Vollzylinder erstellt, die exakt an derselben Stelle positioniert sind und dieselben Durchmesser haben, wie die Sensorflächen. Die Höhe der Zylinder ist dabei so groß, dass wenn der Deckel sich auf dem Grundbehältnis befindet sie genau auf der Platine aufliegen.  
 
+\paragraph{Befestigung} $~$ \\
+
+Die Befestigung für die Ampelschaltung soll möglichst einfach und leicht reproduzierbar sein. Deshalb erschien eine Broschenadel am einfachsten. Diese sind gut für die Befestigung auf Höhe des Brustbereichs und können in passenden Größen bestellt werden mit Klebesockel. 
+
+
+\begin{figure}[!hbpt]
+ \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{gehauuse_4.pdf}
+ \caption{Grundbehältnis des Gehäuses mit Bemaßungen}
+ \label{fig:Grundbe}
+  \end{center}
+\end{figure}
+
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1.4\textwidth,angle=-90]{Deckel.pdf}
  \caption{Deckel des Gehäuses mit Bemaßungen}
@@ -321,9 +369,7 @@ In der ersten Version des Gehäuses war hiermit der Deckel fertig. Es folgte jed
   \end{center}
 \end{figure}
 
-\paragraph{Befestigung} $~$ \\
-
-Die Befestigung für die Ampelschaltung soll möglichst einfach und leicht reproduzierbar sein. Deshalb erschien eine Broschenadel am einfachsten. Diese sind gut für die Befestigung auf Höhe des Brustbereichs und können in passenden Größen bestellt werden mit Klebesockel. 
+\newpage
 
 \section{Fazit}
 
