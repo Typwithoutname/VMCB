@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {6.1}Schaltplan}{18}%
 \contentsline {paragraph}{Batterieversorgung}{18}%
 \contentsline {paragraph}{kapazitiver Sensor}{18}%
-\contentsline {paragraph}{LED-Schaltung}{18}%
+\contentsline {paragraph}{LED-Schaltung}{19}%
 \contentsline {paragraph}{Energiesparmodus-Schalter}{19}%
 \contentsline {paragraph}{Connector}{19}%
 \contentsline {paragraph}{Mikrocontroller}{19}%

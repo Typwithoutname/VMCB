@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.11)  30 DEC 2020 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.11)  30 DEC 2020 13:38
 entering extended mode
 **./BA.tex
 (BA.tex
@@ -302,23 +302,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
-
- []
-
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
@@ -329,87 +329,93 @@ ion <1.7>, but at most version <1.5> allowed
 <Schaltplan.pdf, id=79, 845.07724pt x 597.55246pt>
 File: Schaltplan.pdf Graphic file (type pdf)
 <use Schaltplan.pdf>
-Package pdftex.def Info: Schaltplan.pdf  used on input line 316.
+Package pdftex.def Info: Schaltplan.pdf  used on input line 318.
 (pdftex.def)             Requested size: 545.99762pt x 386.07942pt.
 [19] [20 <./Schaltplan.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 <Layout_Front.png, id=91, 334.851pt x 334.851pt>
 File: Layout_Front.png Graphic file (type png)
 <use Layout_Front.png>
-Package pdftex.def Info: Layout_Front.png  used on input line 362.
+Package pdftex.def Info: Layout_Front.png  used on input line 364.
 (pdftex.def)             Requested size: 234.00238pt x 234.00578pt.
 <Layout_Back.png, id=92, 334.24875pt x 333.6465pt>
 File: Layout_Back.png Graphic file (type png)
 <use Layout_Back.png>
-Package pdftex.def Info: Layout_Back.png  used on input line 369.
+Package pdftex.def Info: Layout_Back.png  used on input line 371.
 (pdftex.def)             Requested size: 234.00238pt x 233.58658pt.
 [22] [23 <./Layout_Front.png> <./Layout_Back.png>]
 <Gehaeuse_Stimmungslich.jpg.jpeg, id=101, 1606.0pt x 903.375pt>
 File: Gehaeuse_Stimmungslich.jpg.jpeg Graphic file (type jpg)
 <use Gehaeuse_Stimmungslich.jpg.jpeg>
 Package pdftex.def Info: Gehaeuse_Stimmungslich.jpg.jpeg  used on input line 38
-3.
+5.
 (pdftex.def)             Requested size: 390.0pt x 219.37833pt.
  [24 <./Gehaeuse_Stimmungslich.jpg.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 <Broschenadel.jpg, id=110, 1505.625pt x 515.9275pt>
 File: Broschenadel.jpg Graphic file (type jpg)
 <use Broschenadel.jpg>
-Package pdftex.def Info: Broschenadel.jpg  used on input line 415.
+Package pdftex.def Info: Broschenadel.jpg  used on input line 417.
 (pdftex.def)             Requested size: 312.00119pt x 106.90732pt.
 <gehauuse_4.pdf, id=111, 1690.315pt x 1195.46625pt>
 File: gehauuse_4.pdf Graphic file (type pdf)
 <use gehauuse_4.pdf>
-Package pdftex.def Info: gehauuse_4.pdf  used on input line 423.
+Package pdftex.def Info: gehauuse_4.pdf  used on input line 425.
 (pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
 <Deckel.pdf, id=112, 1690.315pt x 1195.46625pt>
 File: Deckel.pdf Graphic file (type pdf)
 <use Deckel.pdf>
-Package pdftex.def Info: Deckel.pdf  used on input line 430.
+Package pdftex.def Info: Deckel.pdf  used on input line 432.
 (pdftex.def)             Requested size: 545.99762pt x 386.15056pt.
 [26 <./Broschenadel.jpg>] [27 <./gehauuse_4.pdf, page is rotated 90 degrees>]
-[28 <./Deckel.pdf, page is rotated 90 degrees>] [29] (BA.lof
+[28 <./Deckel.pdf, page is rotated 90 degrees>]
+Overfull \hbox (3.12509pt too wide) in paragraph at lines 446--447
+\OT1/cmr/m/n/12 Er-stel-lung des Schalt-plans recht gut, al-ler-dings gab es et
+-li-che []Uberarbeitungen
+ []
+
+[29] (BA.lof
 Overfull \hbox (2.63765pt too wide) in paragraph at lines 7--7
  [][] []\OT1/cmr/m/n/12 Kennlinien for-ward cur-rent vs. for-ward vol-ta-ge der
  un-ter-schied- 
@@ -419,10 +425,14 @@ Overfull \hbox (2.63765pt too wide) in paragraph at lines 7--7
 \tf@lof=\write4
 \openout4 = `BA.lof'.
 
+ (BA.lot)
+\tf@lot=\write5
+\openout5 = `BA.lot'.
+
  [30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 []\OT1/cmr/m/n/12 HSMx-A10x-xxxxx, Ava-go, https://www.infinite-
  []
 
@@ -434,10 +444,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2682 strings out of 480934
- 37636 string characters out of 2909658
+ 2687 strings out of 480934
+ 37714 string characters out of 2909658
  294563 words of memory out of 3000000
- 18513 multiletter control sequences out of 15000+200000
+ 18515 multiletter control sequences out of 15000+200000
  538451 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,12n,37p,862b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -449,7 +459,7 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on BA.pdf (31 pages, 603519 bytes).
+Output written on BA.pdf (31 pages, 605462 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

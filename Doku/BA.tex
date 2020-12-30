@@ -294,6 +294,8 @@ Der Batteriehalter befindet sich in der linken oberen Ecke von Abbildung \ref{fi
 
 Der kapazitiver Sensor (Abbildung \ref{fig:Schaltplan} oben mittig) wurde wie nach Kapitel 4.1.3 mit einem Sende- und Empfangspin realisiert. Sie sind an Pin 5 und 6 des Mikrocontrollers angeschlossen. Als nächstes wurde ein Jumper eingesetzt um die Möglichkeit offen zu halten den kapazitiven Sensor entweder mit Pads oder einem Connector zu verbinden. Der Connector war als gesicherte Methode gedacht, bei der eine Metallplatte angeschlossen wird als Sensor. Dies war später allerdings nicht notwendig, da der Sensor mit den Pads funktioniert hat und deshalb wurde auch ein Widerstand von 4.7 MOhm ausgewählt, der dazu passt.
 
+\newpage
+
 \paragraph{LED-Schaltung} $~$ \\
 
 Die LED-Schaltung (Abbildung \ref{fig:Schaltplan} oben rechts) ist an dieser Stelle recht simpel zu erklären, da auf die Hintergründe ihrer Entstehung bereits in Kapitel 3.2 eingegangen wurde. 
@@ -437,7 +439,15 @@ Die Befestigung für die Ampelschaltung soll möglichst einfach und leicht repro
 
 \section{Fazit}
 
+Insgesamt hatte das Projekt sowohl positive als auch negative Seiten.
 
+Was den Mikrocontoller angeht, hat uns dieser viel Einarbeitung und Fehlersuche abverlangt. Dies lag vor allem daran an seiner minimalistischen Auslegung, was bei einem solchen Projekt natürlich seine Berechtigung hat. Allerdings war das auch die größte Hürde mit der es zu kämpfen galt. Eine der größten Verzögerungen entstand durch den stuck-at-1-Fehler, dessen Hintergrund in einer einzigen Zeile im Datenblatt lag, die schwer zu entdecken war.
+
+Die Bauteilauswahl hat insgesamt gut funktioniert und die Arbeit mit den Programmen Solid Works und KiCAD war gemischt. Solid Works hat auch ohne große Einarbeitung sehr intuitiv funktioniert. Bei KiCAD lagen die größeren Probleme, trotz Einführungsveranstaltung. Hierbei funktionierte die Erstellung des Schaltplans recht gut, allerdings gab es etliche Überarbeitungen des Layouts, die viel Zeit in Anspruch genommen haben. Dies lag vor allem in der bisherigen Unerfahrenheit bei der selbstständigen Erstellung einer Platine. Mit der Zeit wurde aber auch dieses besser und es konnte einiges an Erfahrung daraus für folgende Projekte mitgenommen werden. 
+
+Ein weiteres Problem war, dass wegen der Corona-Pandemie lange keine eigenständige Arbeit mit der Platine im Labor möglich war. Da zu Hause das notwendige Equipement zum Löten einer SMD-Schaltung nicht vorhanden war, führte dies zu vielen Verzögerungen. Zum Glück konnte letztendlich doch noch die Platine eigenständig im Labor gelötet werden.
+
+Insgesamt haben wir viele neue Erfahrungen gesammelt durch die Ausdauer, die dieses Projekt erfordertet und das dadurch immer tiefere Eintauchen in die Materie. 
 
 
 
@@ -447,11 +457,12 @@ Die Befestigung für die Ampelschaltung soll möglichst einfach und leicht repro
 \cleardoublepage
 \begin{appendix}
 \listoffigures
+\listoftables
 
 \cleardoublepage
 \begin{thebibliography}{99}
-\bibitem{LED} HSMx-A10x-xxxxx, Avago, https://www.infinite-electronic.ru/datasheet/6e-HSMA-A100-Q00H1.pdf
-\bibitem{Broschenadel} 10 Broschennadeln selbstklebend, ca. 30mm , Amazon, 
+\bibitem{LED} HSMx-A10x-xxxxx, Avago, https://www.infinite-electronic.ru/datasheet/6e-HSMA-A100-Q00H1.pdf.
+\bibitem{Broschenadel} 10 Broschennadeln selbstklebend, ca. 30mm , Amazon.
 %https://www.amazon.de/gp/product/B008CNY7T2/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1
 \end{thebibliography}
 
