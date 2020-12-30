@@ -1,15 +1,16 @@
 \babel@toc {ngerman}{}
 \contentsline {figure}{\numberline {1}{\ignorespaces Flussdiagramm zum Ablauf des Hauptprogramms}}{4}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Zustandsdiagramm}}{5}%
-\contentsline {figure}{\numberline {3}{\ignorespaces STM32G031J6M6 als SMD-Baustein}}{7}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6}}{7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces STM32G031J6M6 als SMD-Baustein QUELLE}}{7}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6 QUELLE}}{7}%
 \contentsline {figure}{\numberline {5}{\ignorespaces LED Schaltung}}{9}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's }}{11}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's \cite {LED}}}{11}%
 \contentsline {figure}{\numberline {7}{\ignorespaces RC-Tiefpass}}{13}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Funktionsweise des Kapazitiven Sensors}}{14}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Schaltplan}}{20}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Layout - Front Layer}}{23}%
 \contentsline {figure}{\numberline {11}{\ignorespaces Layout - Back Layer}}{23}%
 \contentsline {figure}{\numberline {12}{\ignorespaces 3D gedrucktes Gehäuse}}{24}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Grundbehältnis des Gehäuses mit Bemaßungen}}{27}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Deckel des Gehäuses mit Bemaßungen}}{28}%
+\contentsline {figure}{\numberline {13}{\ignorespaces bestellte Broschenadel zur Befestigung \cite {Broschenadel}}}{26}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Grundbehältnis des Gehäuses mit Bemaßungen}}{27}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Deckel des Gehäuses mit Bemaßungen}}{28}%
