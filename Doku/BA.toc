@@ -1,40 +1,40 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Funktionsweise}{5}
-\contentsline {section}{\numberline {2}Microcontroller}{7}
-\contentsline {section}{\numberline {3}LED}{9}
-\contentsline {subsection}{\numberline {3.1}WS2812b}{9}
-\contentsline {subsection}{\numberline {3.2}LED-Schaltung}{10}
-\contentsline {subsubsection}{\numberline {3.2.1}keine LED leuchtet}{11}
-\contentsline {subsubsection}{\numberline {3.2.2}gr\IeC {\"u}ne LED}{11}
-\contentsline {subsubsection}{\numberline {3.2.3}gelbe LED}{11}
-\contentsline {subsubsection}{\numberline {3.2.4}rote LED}{11}
-\contentsline {subsection}{\numberline {3.3}Auswahl der Widerst\IeC {\"a}nde f\IeC {\"u}r die LED-Schaltung}{12}
-\contentsline {section}{\numberline {4}Kapazitiver Sensor}{14}
-\contentsline {subsection}{\numberline {4.1}Verschiedene Varianten von Kapazitiven Sensoren}{14}
-\contentsline {subsubsection}{\numberline {4.1.1}Komparator}{14}
-\contentsline {subsubsection}{\numberline {4.1.2}ADC}{15}
-\contentsline {subsubsection}{\numberline {4.1.3}Sende- und Empfangspins}{15}
-\contentsline {subsection}{\numberline {4.2}Bewertung}{16}
-\contentsline {subsection}{\numberline {4.3}Umsetzung}{16}
-\contentsline {subsection}{\numberline {4.4}St\IeC {\"o}rquellen und Probleme}{17}
-\contentsline {section}{\numberline {5}Energiesparmodus}{18}
-\contentsline {section}{\numberline {6}Schaltplan und Layout}{19}
-\contentsline {subsection}{\numberline {6.1}Schaltplan}{19}
-\contentsline {paragraph}{Batterieversorgung}{19}
-\contentsline {paragraph}{kapazitiver Sensor}{19}
-\contentsline {paragraph}{LED-Schaltung}{20}
-\contentsline {paragraph}{Energiesparmodus-Schalter}{20}
-\contentsline {paragraph}{Connector}{20}
-\contentsline {paragraph}{Mikrocontroller}{20}
-\contentsline {subsection}{\numberline {6.2}Layout}{22}
-\contentsline {paragraph}{Batterieversorgung}{22}
-\contentsline {paragraph}{LED-Schaltung}{22}
-\contentsline {paragraph}{Energiesparmodus-Schalter}{22}
-\contentsline {paragraph}{Mikrocontroller}{22}
-\contentsline {paragraph}{Connector}{22}
-\contentsline {paragraph}{kapazitiver Sensor}{23}
-\contentsline {section}{\numberline {7}Geh\IeC {\"a}use}{25}
-\contentsline {subsection}{\numberline {7.1}Grundbeh\IeC {\"a}ltnis}{26}
-\contentsline {subsection}{\numberline {7.2}Deckel}{26}
-\contentsline {subsection}{\numberline {7.3}Befestigung}{27}
-\contentsline {section}{\numberline {8}Fazit}{30}
+\contentsline {section}{\numberline {1}Funktionsweise}{5}%
+\contentsline {section}{\numberline {2}Microcontroller}{7}%
+\contentsline {section}{\numberline {3}LED}{9}%
+\contentsline {subsection}{\numberline {3.1}WS2812b}{9}%
+\contentsline {subsection}{\numberline {3.2}LED-Schaltung}{10}%
+\contentsline {subsubsection}{\numberline {3.2.1}keine LED leuchtet}{11}%
+\contentsline {subsubsection}{\numberline {3.2.2}grüne LED}{11}%
+\contentsline {subsubsection}{\numberline {3.2.3}gelbe LED}{11}%
+\contentsline {subsubsection}{\numberline {3.2.4}rote LED}{11}%
+\contentsline {subsection}{\numberline {3.3}Auswahl der Widerstände für die LED-Schaltung}{12}%
+\contentsline {section}{\numberline {4}Kapazitiver Sensor}{14}%
+\contentsline {subsection}{\numberline {4.1}Verschiedene Varianten von Kapazitiven Sensoren}{14}%
+\contentsline {subsubsection}{\numberline {4.1.1}Komparator}{14}%
+\contentsline {subsubsection}{\numberline {4.1.2}ADC}{15}%
+\contentsline {subsubsection}{\numberline {4.1.3}Sende- und Empfangspins}{15}%
+\contentsline {subsection}{\numberline {4.2}Bewertung}{16}%
+\contentsline {subsection}{\numberline {4.3}Umsetzung}{16}%
+\contentsline {subsection}{\numberline {4.4}Störquellen und Probleme}{17}%
+\contentsline {section}{\numberline {5}Energiesparmodus}{18}%
+\contentsline {section}{\numberline {6}Schaltplan und Layout}{19}%
+\contentsline {subsection}{\numberline {6.1}Schaltplan}{19}%
+\contentsline {paragraph}{Batterieversorgung}{19}%
+\contentsline {paragraph}{kapazitiver Sensor}{19}%
+\contentsline {paragraph}{LED-Schaltung}{20}%
+\contentsline {paragraph}{Energiesparmodus-Schalter}{20}%
+\contentsline {paragraph}{Connector}{20}%
+\contentsline {paragraph}{Mikrocontroller}{20}%
+\contentsline {subsection}{\numberline {6.2}Layout}{22}%
+\contentsline {paragraph}{Batterieversorgung}{22}%
+\contentsline {paragraph}{LED-Schaltung}{22}%
+\contentsline {paragraph}{Energiesparmodus-Schalter}{22}%
+\contentsline {paragraph}{Mikrocontroller}{22}%
+\contentsline {paragraph}{Connector}{22}%
+\contentsline {paragraph}{kapazitiver Sensor}{23}%
+\contentsline {section}{\numberline {7}Gehäuse}{25}%
+\contentsline {subsection}{\numberline {7.1}Grundbehältnis}{25}%
+\contentsline {subsection}{\numberline {7.2}Deckel}{26}%
+\contentsline {subsection}{\numberline {7.3}Befestigung}{27}%
+\contentsline {section}{\numberline {8}Fazit}{30}%

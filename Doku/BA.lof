@@ -1,16 +1,16 @@
 \babel@toc {ngerman}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Flussdiagramm zum Ablauf des Hauptprogramms}}{5}
-\contentsline {figure}{\numberline {2}{\ignorespaces Zustandsdiagramm}}{6}
-\contentsline {figure}{\numberline {3}{\ignorespaces STM32G031J6M6 als SMD-Baustein QUELLE}}{8}
-\contentsline {figure}{\numberline {4}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6 QUELLE}}{8}
-\contentsline {figure}{\numberline {5}{\ignorespaces LED Schaltung}}{10}
-\contentsline {figure}{\numberline {6}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's \cite {LED}}}{12}
-\contentsline {figure}{\numberline {7}{\ignorespaces RC-Tiefpass}}{14}
-\contentsline {figure}{\numberline {8}{\ignorespaces Funktionsweise des Kapazitiven Sensors}}{15}
-\contentsline {figure}{\numberline {9}{\ignorespaces Schaltplan}}{21}
-\contentsline {figure}{\numberline {10}{\ignorespaces Layout - Front Layer}}{24}
-\contentsline {figure}{\numberline {11}{\ignorespaces Layout - Back Layer}}{24}
-\contentsline {figure}{\numberline {12}{\ignorespaces 3D gedrucktes Geh\IeC {\"a}use}}{25}
-\contentsline {figure}{\numberline {13}{\ignorespaces bestellte Broschenadel zur Befestigung \cite {Broschenadel}}}{27}
-\contentsline {figure}{\numberline {14}{\ignorespaces Grundbeh\IeC {\"a}ltnis des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{28}
-\contentsline {figure}{\numberline {15}{\ignorespaces Deckel des Geh\IeC {\"a}uses mit Bema\IeC {\ss }ungen}}{29}
+\contentsline {figure}{\numberline {1}{\ignorespaces Flussdiagramm zum Ablauf des Hauptprogramms}}{5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Zustandsdiagramm}}{6}%
+\contentsline {figure}{\numberline {3}{\ignorespaces STM32G031J6M6 als SMD-Baustein QUELLE}}{8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Pinbelegung des Mikrocontrollers STM32G031J6M6 QUELLE}}{8}%
+\contentsline {figure}{\numberline {5}{\ignorespaces LED Schaltung}}{10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Kennlinien forward current vs. forward voltage der unterschiedlichen SMD-LED's \cite {LED}}}{12}%
+\contentsline {figure}{\numberline {7}{\ignorespaces RC-Tiefpass}}{14}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Funktionsweise des Kapazitiven Sensors}}{15}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Schaltplan}}{21}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Layout - Front Layer}}{24}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Layout - Back Layer}}{24}%
+\contentsline {figure}{\numberline {12}{\ignorespaces 3D gedrucktes Gehäuse}}{25}%
+\contentsline {figure}{\numberline {13}{\ignorespaces bestellte Broschenadel zur Befestigung \cite {Broschenadel}}}{27}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Grundbehältnis des Gehäuses mit Bemaßungen}}{28}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Deckel des Gehäuses mit Bemaßungen}}{29}%
