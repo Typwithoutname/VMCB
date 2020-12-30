@@ -11,6 +11,7 @@ automark,
 %headsepline,
 ]{article}
 
+
 \usepackage[utf8]{inputenc}
 \usepackage{tabularx}
 %\usepackage[english]{babel}
@@ -126,14 +127,15 @@ Dabei können bis zu 4 LED's mit 2 Pins angesteuert werden. In der vorliegenden 
 \subsubsection{keine LED leuchtet}
 Der Pin \glqq PA8-LEDs\grqq{} wird als Input deklariert, so fließt im linken Zweig kein Strom. Wenn nun auch noch \glqq PB7-LEDs\grqq{} auf Input gesetzt wird, wird auch dieser Pin hochohmig und im rechten Zweig fließt kein Strom. Wenn weder im linken noch im rechten Zweig ein Stromfluss entsteht sind alle LED's aus.
 
-\subsubsection{rote LED}
-Der Pin \glqq PB7-LEDs\grqq{} wird als Output auf \glqq LOW\grqq{} gesetzt. Dadurch fließt ein Strom zwischen 3.3 V und dem Output \glqq LOW\grqq{} $\rightarrow$ LED1 leuchtet. Damit die anderen LEDs nicht leuchten, wird \glqq PA8-LEDs\grqq{} auf Input gesetzt, dadurch wird er hochohmig und im linken Zweig fließt kein Strom.
+\subsubsection{grüne LED}
+Indem der Pin \glqq PA8-LEDs\grqq{} als Output auf \glqq HIGH\grqq{} gelegt wird, fließt Strom zwischen \glqq HIGH\grqq{} und Ground $\rightarrow$ LED3 leuchtet. Um die rote LED nicht zu aktivieren, wird \glqq PB7-LEDs\grqq{} als Input gesetzt und wiederum hochohmig. Die gelbe LED leuchtet nicht, da kein Spannungsfall zwischen 3.3 V und \glqq PA8-LEDs\grqq{} vorhanden ist.
 
 \subsubsection{gelbe LED}
 Um die gelbe LED2 leuchten zu lassen wird nun der Pin \glqq PA8-LEDs\grqq{} als Output auf \glqq LOW\grqq{} gesetzt. Die Folge ist, dass Strom zwischen 3.3 V und \glqq PA8-LEDs\grqq{} fließt $\rightarrow$ LED2 leuchtet. Um zu erreichen, dass auch nur LED2 leuchtet wird \glqq PB7-LEDs\grqq{} als Input gesetzt und somit hochohmig $\rightarrow$ im rechten Zweig fließt kein Strom.
 
-\subsubsection{grüne LED}
-Indem der Pin \glqq PA8-LEDs\grqq{} als Output auf \glqq HIGH\grqq{} gelegt wird, fließt Strom zwischen \glqq HIGH\grqq{} und Ground $\rightarrow$ LED3 leuchtet. Um die rote LED nicht zu aktivieren, wird \glqq PB7-LEDs\grqq{} als Input gesetzt und wiederum hochohmig. Die gelbe LED leuchtet nicht, da kein Spannungsfall zwischen 3.3 V und \glqq PA8-LEDs\grqq{} vorhanden ist.
+\subsubsection{rote LED}
+Der Pin \glqq PB7-LEDs\grqq{} wird als Output auf \glqq LOW\grqq{} gesetzt. Dadurch fließt ein Strom zwischen 3.3 V und dem Output \glqq LOW\grqq{} $\rightarrow$ LED1 leuchtet. Damit die anderen LEDs nicht leuchten, wird \glqq PA8-LEDs\grqq{} auf Input gesetzt, dadurch wird er hochohmig und im linken Zweig fließt kein Strom.
+
 
 Dies ist in der folgenden Tabelle \ref{tab:ZusammenfassungderFunktionsweisederLEDSchaltung} noch einmal zusammenfassend dargestellt.
 
@@ -142,10 +144,11 @@ Dies ist in der folgenden Tabelle \ref{tab:ZusammenfassungderFunktionsweisederLE
 \rowcolors{3}{lightgray}{white}
 \begin{tabularx}{\columnwidth}{XXXl}
 Leuchtet &Zustand &PA8-LEDs &PB7-LEDs \\ \hline
-LED1 & rot & IN &OUT$-$LOW\\
+keine LED & aus & IN & IN\\
+LED1 & grün & OUT$-$HIGH & IN\\
 LED2 & gelb & OUT$-$LOW &IN\\
-LED3 & grün & OUT$-$HIGH & IN\\
-keine LED & aus & IN & IN
+LED3 & rot & IN &OUT$-$LOW
+
 \label{tab:ZusammenfassungderFunktionsweisederLEDSchaltung}
 \end{tabularx}
 \end{center}
@@ -201,7 +204,7 @@ Zuerst wird die Komparator-Methode erklärt. Hierbei wird ein Dreieck-Signal an 
 \begin{figure}[!hbpt]
  \begin{center} \includegraphics[width=1\textwidth]{RCTiefpass.png}
  \caption{RC-Tiefpass}
- \label{fig:Tiefpass}
+ \label{fig:Tiefpass \ref{RCTiefpass}}
   \end{center}
 \end{figure}
 
@@ -233,9 +236,7 @@ Ein großes Problem ist zudem, dass der Receivepin nach einer einzelnen Messung 
 
 Der Receivepin meldet also einen HIGH-Pegel schon bei beispielsweise 1.8 V, was das Ende der Messung bedeuten würde, obwohl für den nächsten Zyklus 3.3 V an diesem Pin benötigt werden. Deswegen wird der Pin danach als Output deklariert und der entsprechende Pegel angelegt bis dort die 3.3 V bzw. 0 V anliegen. Zusätzlich werden Pullup- und Pulldownwiderstände genutzt um diesen Prozess zu beschleunigen. 
 
-Zu Beginn des Projektes wurde der Kapazitive Sensor mit einem Metallteil, welches mit einem Kabel verbunden ist, ausgetestet, was gut funktioniert hat. Nur für eine kompakten und vor allem einfachen Aufbau ist dies groß bzw. zu kompliziert zu erstellen. Deswegen wurde auf ein bereits bestehendes Metall zurückgegriffen nämlich das Kupfer der Platine. Es wurden vier kreisförmige Flächen angelegt, die den Designrules 
-%TODO Link zu Designrules einbinden
-von STM entsprechen. Dadurch könnte auch ohne externes Metallteil eine Berührung erkannt werden.
+Zu Beginn des Projektes wurde der Kapazitive Sensor mit einem Metallteil, welches mit einem Kabel verbunden ist, ausgetestet, was gut funktioniert hat. Nur für eine kompakten und vor allem einfachen Aufbau ist dies groß bzw. zu kompliziert zu erstellen. Deswegen wurde auf ein bereits bestehendes Metall zurückgegriffen nämlich das Kupfer der Platine. Es wurden vier kreisförmige Flächen angelegt, die den Designrules \ref{Guidelines}von STM entsprechen. Dadurch könnte auch ohne externes Metallteil eine Berührung erkannt werden.
 
 Ein weiterer wichtiger Punkt ist die Größe des Widerstandes, da dieser der Sensitivität des Sensors entspricht. Bei einem Widerstand von beispielsweise 1 MOhm wird nur ein direkter Kontakt erkannt. Wird dieser erhöht so kann auch eine Näherung oder Kontakt über eine kurze Luftlinie bzw. durch ein anderes Material gemessen werden. Dieses Konzept wurde auch bei diesem Projekt umgesetzt, da auch durch das Gehäuse eine Berührung erkannt werden soll. Deswegen wurde ein 4,7 MOhm Widerstand verwendet. Außerdem wurde das Gehäuse so angepasst, dass die herausstehenden Zylinder die Kupferflächen des Sensors und das Gehäuse direkt verbinden. Ein großer Luftspalt zwischen diesen beiden Komponenten würde es hier sehr schwierig machen einen Kontakt zu unterscheiden. Aus dem selben Grund wurde auch noch Sekundenkleber verwendet. 
 
@@ -464,6 +465,8 @@ Insgesamt haben wir viele neue Erfahrungen gesammelt durch die Ausdauer, die die
 \bibitem{LED} HSMx-A10x-xxxxx, Avago, https://www.infinite-electronic.ru/datasheet/6e-HSMA-A100-Q00H1.pdf.
 \bibitem{Broschenadel} 10 Broschennadeln selbstklebend, ca. 30mm , Amazon.
 %https://www.amazon.de/gp/product/B008CNY7T2/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1
+\bibitem{Guidelines} dm00445657-getting-started-with-touch-sensing-control-on-stm32-microcontrollers-stmicroelectronics.pdf, https://www.st.com/resource/en/application_note/dm00445657-getting-started-with-touch-sensing-control-on-stm32-microcontrollers-stmicroelectronics.pdf.
+\bibitem{RCTiefpass} einfuehrung_09.pdf,http://www.controllersandpcs.de/lehrarchiv/pdfs/elektronik/einfuehrung_09.pdf.
 \end{thebibliography}
 
 \cleardoublepage
