@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.11)  30 DEC 2020 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.11)  30 DEC 2020 12:33
 entering extended mode
 **./BA.tex
 (BA.tex
@@ -426,65 +426,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--454
 []\OT1/cmr/m/n/12 HSMx-A10x-xxxxx, Ava-go, https://www.infinite-
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.454 ....amazon.de/gp/product/B008CNY7T2/ref=ppx_
-                                                  yo_dt_b_asin_title_o01_s00...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Double subscript.
-l.454 ...de/gp/product/B008CNY7T2/ref=ppx_yo_dt_b_
-                                                  asin_title_o01_s00?ie=UTF8...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Misplaced alignment tab character &.
-l.454 ...f=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&
-                                                  psc=1
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-! LaTeX Error: Command \end{thebibliography} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 \end{thebibliography}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Empty `thebibliography' environment on input line 455.
-
-
-LaTeX Warning: Empty `thebibliography' environment on input line 455.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.455 \end{thebibliography}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (327.50798pt too wide) in paragraph at lines 454--456
-[]\OT1/cmr/m/n/12 10 Bro-schen-na-deln selbst-kle-bend, ca. 30mm , Ama-zon, htt
-ps://www.amazon.de/gp/product/B008CNY7T2/ref=ppx$[]\OML/cmm/m/it/12 o[]t[][]sin
-[]itle[]\OT1/cmr/m/n/12 01[]00?\OML/cmm/m/it/12 ie \OT1/cmr/m/n/12 =
- []
-
 [31
 
 ] (BA.aux)
@@ -504,14 +445,13 @@ Here is how much of TeX's memory you used:
 /dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb>
-Output written on BA.pdf (31 pages, 616132 bytes).
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on BA.pdf (31 pages, 603519 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
